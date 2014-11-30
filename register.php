@@ -43,6 +43,7 @@ if(passwordStr($pass) && isset($_POST["submit"])) { // If everything is ok, then
 
 	if($result) {
 	echo "Account Successfully Created";
+	header('location: login.php');
 	} else {
 	echo "Failure To Create Account";
 	}
