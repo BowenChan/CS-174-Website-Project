@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<title>Register</title>
+</head>
+<body>
+
+<p><a href="register.php">Register</a> | <a href="login.php">Login</a></p>
+
+<h3>Registration Form</h3>
+<form action="" method="POST">
+
+Email: <input type="text" name="email"><br />
+Password: <input type="password" name="pass"><br />
+<input type="submit" value="Login" name="submit" />
+
+</form>
+
+<?php
+$email=$_POST['email'];
+$pass=$_POST['pass'];
+
+function passwordStr($password) // Function to check pw strength
+{
+	if (strlen($pass) >= 8 && preg_match('/[a-z]+[0-9]+/', $pass)) {
+		return TRUE;
+	}
+	else return FALSE;
+}
+
+if(passwordStr($pass) && isset($_POST["submit"])) { // If everything is ok, then continue to submit.
+
+	$con=mysql_connct('PLACEHOLDER','PLACEHOLDER','') or die (mysql_error()); // Connect Text
+	mysql_select_db('PLACEHOLDER') or die("Error: Cannot Select Database"); // Select DB
+
+	$query=mysql_query("SELECT * FROM login WHERE email='".$email."'"); // Check for existing entry
+	$numrows=mysql_num_rows($query);
+
+	if($numrows==0)	{ // If no entries match the registrant
+	$sql="INSERT INTO login(email, password) VALUES('$email', '$pass')"; // Insert account into DB.
+	$result=mysql_query($sql);
+
+	if($result) {
+	echo "Account Successfully Created";
+	} else {
+	echo "Failure To Create Account";
+	}
+	} else {
+	echo "That email is already registered with us. Please try again";
+	}
+}
+?>
+
+</body>
+</html>

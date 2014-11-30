@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<title>Login</title>
+</head>
+<body>
+
+<h3>Login Form</h3>
+<form action="" method ="POST">
+Email: <input type="text" name="email"><br />
+Password: <input type="password" name="pass"><br />
+<input type="submit" value="Login" name="submit"><br />
+</form>
+
+<?php
+
+if (isset($_POST["submit"])) {
+	$email=$_POST['email'];
+	$pass=$_POST['pass'];
+
+	$con=mysql_connect('PLACEHOLDER', 'PLACEHOLDER', '') or die(mysql_error());
+	mysql_select_db('PLACEHOLDER') or die("Cannot Select DB");
+
+	$query=mysql_query("SELECT * FROM login WHERE email='".$email."' AND password='".$pass."'");
+	$numrows=mysql_num_rows($query);
+
+	if($numrows!=0) {
+		while($row=mysql_fetch_assoc($query)) { // When you found the row w/ the login info
+			$dbemail=$row['email'];
+			$dbpassword=$row['password'];
+		}
+		if($email == $dbemail && $password == $dbpassword) {
+			session_start();
+			$_SESSION['sess_users']=$user;
+			/* REDIRECT USER TO FRONT PAGE */
+			header('location: PLACEHOLDER');
+		} else {
+			echo: "Invalid Username or Password, Please Try Again";
+		}
+	}
+}
+?>
+</body>
+</html>
