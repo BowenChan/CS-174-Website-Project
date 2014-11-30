@@ -13,13 +13,13 @@ Password: <input type="password" name="pass"><br />
 </form>
 
 <?php
+include 'dbconnect.php';
 
 if (isset($_POST["submit"])) {
 	$email=$_POST['email'];
 	$pass=$_POST['pass'];
 
-	$con=mysql_connect('PLACEHOLDER', 'PLACEHOLDER', '') or die(mysql_error());
-	mysql_select_db('PLACEHOLDER') or die("Cannot Select DB");
+	mysql_select_db('cs174') or die("Cannot Select DB");
 
 	$query=mysql_query("SELECT * FROM login WHERE email='".$email."' AND password='".$pass."'");
 	$numrows=mysql_num_rows($query);
@@ -33,7 +33,7 @@ if (isset($_POST["submit"])) {
 			session_start();
 			$_SESSION['sess_users']=$user;
 			/* REDIRECT USER TO FRONT PAGE */
-			header('location: PLACEHOLDER');
+			header('location: index.html');
 		} else {
 			echo: "Invalid Username or Password, Please Try Again";
 		}

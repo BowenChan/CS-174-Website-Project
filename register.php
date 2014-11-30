@@ -17,6 +17,8 @@ Password: <input type="password" name="pass"><br />
 </form>
 
 <?php
+include 'dbconnect.php';
+
 $email=$_POST['email'];
 $pass=$_POST['pass'];
 
@@ -30,8 +32,7 @@ function passwordStr($password) // Function to check pw strength
 
 if(passwordStr($pass) && isset($_POST["submit"])) { // If everything is ok, then continue to submit.
 
-	$con=mysql_connct('PLACEHOLDER','PLACEHOLDER','') or die (mysql_error()); // Connect Text
-	mysql_select_db('PLACEHOLDER') or die("Error: Cannot Select Database"); // Select DB
+	mysql_select_db('cs174') or die("Error: Cannot Select Database"); // Select DB
 
 	$query=mysql_query("SELECT * FROM login WHERE email='".$email."'"); // Check for existing entry
 	$numrows=mysql_num_rows($query);
