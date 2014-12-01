@@ -33,7 +33,9 @@ print "<table><caption></caption>"	;
 	<th scope=\"col\">Language</th>
 	<th scope=\"col\">View Count</th>
 	<th scope=\"col\">Video Type</th>
-	<th scope=\"col\">Tag</th></tr></thead>";
+	<th scope=\"col\">Tag</th>
+	<th scope=\"col\">Favorite</th></tr></thead>
+	";
 if(isset($_POST['sortBy'])){
 	$sortBy = $_POST['sortBy'];
 	$sql = "select * from fun_video order by $sortBy";
@@ -50,8 +52,8 @@ while (list($id, $title, $link, $length, $resolution, $desc, $language, $count, 
 	print "<tbody><tr>
 	<td><a href=$link target=_blank><img src=$image width=\"250px\" /></a></td>
 	<td width=\"200px\">$title</td><td width=\"100\" style=\"text-align:center\">$length</td><td style=\"text-align:center\">$resolution</td>
-	<td width=\"250\">$desc</td><td width=\"100\">$language</td><td>$count</td>
-	<td>$type</td><td>$tag</td></tr>";
+	<td width=\"220\">$desc</td><td width=\"100\">$language</td><td>$count</td>
+	<td>$type</td><td>$tag</td><td><input type=checkbox name=\"fav[]\" value=$id></td></tr>";
  	print "</tbody>";
 }
 print "</table>";
