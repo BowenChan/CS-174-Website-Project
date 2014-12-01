@@ -29,7 +29,7 @@ $image1 =mysql_real_escape_string(trim(strip_tags($image1)),$dbc);
 $tag1 = mysql_real_escape_string(trim(strip_tags($tag1)),$dbc); 
 print "
 <form method=post action='updateinfo.php'>
-<p><label for=title><strong>Video Title</strong></label> <input type=text name=title id=title size=40 value='$title' />
+<p><label for=title><strong>Video Title</strong></label> <input type=text name=title id=title size=40 value='$title1' />
 </p>
 <p>
 <label for=link><strong>Video Link</strong></label> <input type=text name=link id =link size=40 value='$link1'/>
