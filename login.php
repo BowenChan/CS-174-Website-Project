@@ -1,18 +1,3 @@
-<!doctype html>
-<html>
-<head>
-<title>Login</title>
-</head>
-<body>
-
-<h3>Login Form</h3>
-<form action="" method ="POST">
-Email: <input type="text" name="email"><br />
-Password: <input type="password" name="pass"><br />
-<input type="submit" value="Login" name="submit"><br />
-<pre><input type="checkbox" name="store_login" value="user">Remember Me<br></pre>
-</form>
-
 <?php
 include 'dbconnect.php';
 session_start();
@@ -45,20 +30,37 @@ if (isset($_POST["submit"])) {
 
 		if($email == $dbemail && $pass == $dbpassword) {
 			$_SESSION['sess_users']=$dbemail;
-			//echo "You are now logged in";
+			echo "You are now logged in";
 			if (isset($_COOKIE['PHPSESSID']))
        			 session_id($_COOKIE['PHPSESSID']); 
 			/* REDIRECT USER TO FRONT PAGE AFTER LOGIN */
 			ob_start();
-			header("Location:http://www.sjsu-cs.org/classes/cs174/sec2/chan/cs174project/welcome.php");
+			header("location: welcome.php",true);
 			ob_flush();
 			
 			// header('location: index.html'); Doesn't work at the moment.
 		} else {
+			header("location: login.php",true);
 			echo "Invalid Username or Password, Please Try Again";
 		}
 	}
 }
 ?>
+<!doctype html>
+<html>
+<head>
+<title>Login</title>
+</head>
+<body>
+
+<h3>Login Form</h3>
+<form action="login.php" method ="POST">
+Email: <input type="text" name="email"><br />
+Password: <input type="password" name="pass"><br />
+<input type="submit" value="Login" name="submit"><br />
+<pre><input type="checkbox" name="store_login" value="user">Remember Me<br></pre>
+</form>
+
+
 </body>
 </html>
