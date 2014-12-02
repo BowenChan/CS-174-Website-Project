@@ -39,7 +39,7 @@ if (isset($_POST["submit"])) {
 			echo "Invalid Username or Password, Please Try Again";
 		}
 	}
-
+	
 if (isset($_COOKIE['user']) // If user opts in, store user info to a cookie for 1 minute
 {
 	$cookie_email= "User";
