@@ -1,6 +1,6 @@
 
 <?php include("dbconnect.php");
-include('header.html'); 
+include('header.php'); 
 //recover the form variable values.
 if(!empty($link) || !empty($title) || !empty($image)){
 $title= mysql_real_escape_string(trim(strip_tags($_POST['title'])),$dbc);

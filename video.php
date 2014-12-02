@@ -7,7 +7,7 @@
 
 <body>
 <?php
-	include('header.html');
+	include('header.php');
 	include('multiple_sort.php');
 	include('display.php');
 	display('selectdb.php');

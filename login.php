@@ -15,6 +15,7 @@ Password: <input type="password" name="pass"><br />
 
 <?php
 include 'dbconnect.php';
+session_start();
 ob_start();
 if (isset($_POST["submit"])) {
 	$email=$_POST['email'];
@@ -31,19 +32,18 @@ if (isset($_POST["submit"])) {
 			$dbpassword=$row['password'];
 		}
 		if($email == $dbemail && $pass == $dbpassword) {
-			session_start();
-			$_SESSION['sess_users']=$user;
+			$_SESSION['sess_users']=$dbemail;
 			echo "You are now logged in";
 			echo $_SESSION['sess_users'];
 			/* REDIRECT USER TO FRONT PAGE AFTER LOGIN */
-			header('Location: welcome.php');
+			header("location: register.php");
+			exit();
 			// header('location: index.html'); Doesn't work at the moment.
 		} else {
 			echo "Invalid Username or Password, Please Try Again";
 		}
 	}
-}
-if (isset($_COOKIE['user'])) // If user opts in, store user info to a cookie for 1 minute
+	if (isset($_COOKIE['user'])) // If user opts in, store user info to a cookie for 1 minute
 {
 	$cookie_email= "User";
 	$cookie_pass= "Password";
@@ -52,6 +52,8 @@ if (isset($_COOKIE['user'])) // If user opts in, store user info to a cookie for
 
 	setcookie ($cookie_email, $email, time() + 60, "/");
 	setcookie ($cookie_pass, $pass, time() + 60, "/");
+}
+
 }
 
 ?>

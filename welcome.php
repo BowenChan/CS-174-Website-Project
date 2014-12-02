@@ -7,7 +7,7 @@ session_start();
 <meta charset="UTF-8">
 <title>Welcome</title>
 </head>
-<?php include('header.html');?>
+<?php include('header.php');?>
 <body>
 <?php 
 //define('TITLE', 'welcome');

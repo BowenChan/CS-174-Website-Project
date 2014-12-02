@@ -9,7 +9,7 @@
 <?php
 	session_start();
 	ob_start();
-	include('header.html');
+	include('header.php');
 	require_once("connect.php");
 	include('selectdbfav.php');
 	
