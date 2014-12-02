@@ -40,7 +40,7 @@ if (isset($_POST["submit"])) {
 		}
 	}
 	
-if (isset($_COOKIE['user']) // If user opts in, store user info to a cookie for 1 minute
+if (isset($_COOKIE['user'])) // If user opts in, store user info to a cookie for 1 minute
 {
 	$cookie_email= "User";
 	$cookie_pass= "Password";
@@ -49,6 +49,7 @@ if (isset($_COOKIE['user']) // If user opts in, store user info to a cookie for 
 
 	setcookie ($cookie_email, $email, time() + 60, "/");
 	setcookie ($cookie_pass, $pass, time() + 60, "/");
+}
 }
 
 ?>

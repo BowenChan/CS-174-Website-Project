@@ -1,5 +1,5 @@
 <?php
-
+include('header.html');
 include("dbconnect.php");
 $title= mysql_real_escape_string(trim(strip_tags($_POST['title'])),$dbc);
 $link= mysql_real_escape_string(trim(strip_tags($_POST['link'])),$dbc);
@@ -21,4 +21,4 @@ include("dbconnect.php");
         mysqli_query($conn, $query);
 ?>
 <h2>Thanks!!</h2>
-<h2><a href="viewData.php">View My Video Collection!!!</a></h2>
+<h2><a href="video.php">View My Video Collection!!!</a></h2>

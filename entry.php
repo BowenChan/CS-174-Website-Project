@@ -1,13 +1,8 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Entry</title>
-</head>
 
-<body>
-<?php include("dbconnect.php"); 
+<?php include("dbconnect.php");
+include('header.html'); 
 //recover the form variable values.
+if(!empty($link) || !empty($title) || !empty($image)){
 $title= mysql_real_escape_string(trim(strip_tags($_POST['title'])),$dbc);
 $link= mysql_real_escape_string(trim(strip_tags($_POST['link'])),$dbc);
 $length= $_POST['length'];
@@ -27,13 +22,11 @@ $query = "insert into fun_video "
         ;
 
 //var_dump($query);	   
-if(!empty($link) || !empty($title) || !empty($image)){
+
 	mysqli_query($conn,$query);
 	print "<h2>Thanks!!</h2>";
 }
 else 
 	print "<h2>Your input is incomplete and has not be added!</h2>";
 ?>
-<h2><a href="viewData.php">View My Video Collection!!!</a></h2>
-</body>
-</html>
+<h2><a href="video.php">View My Video Collection!!!</a></h2>

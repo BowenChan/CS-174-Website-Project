@@ -3,6 +3,7 @@
 <head><title>Input Verification Page</title>
 </head>
 <body bgcolor='white'>
+<?php include('header.html');?>
 <?php
 include_once("dbconnect.php");
 //In case the register_globals is turned off, the form parameters can still be recovered as follows.
