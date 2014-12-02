@@ -10,6 +10,7 @@
 Email: <input type="text" name="email"><br />
 Password: <input type="password" name="pass"><br />
 <input type="submit" value="Login" name="submit"><br />
+<pre><input type="checkbox" name="store_login" value="user">Remember Me<br></pre>
 </form>
 
 <?php
