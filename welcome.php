@@ -13,7 +13,6 @@ session_start();
 ob_start();
 
 //define('TITLE', 'welcome');
-//include ('header.html');
 if($_SESSION['sess_users'] === '')
 {
 	echo "You are not logged in";
@@ -27,9 +26,9 @@ ob_end_flush()
 <p><a href="video.php">Browse my video collection!</a></p>
 <div>
 <?php
-if(!($_SESSION['sesS_users'] == ''))
+if(!($_SESSION['sess_users'] == ''))
 {
-	echo "<p>Click <a href="logout.php">here</a> to logout.</p>";
+	echo "<p>Click <a href=logout.php>here</a> to logout.</p>";
 }
 ?>
 </div>
