@@ -8,6 +8,7 @@
 <body>
 <?php
 	session_start();
+	ob_start();
 	include('connect.php');
 	include('selectdbfav.php');
 	if(isset($_SESSION['sess_user'])){
@@ -16,7 +17,7 @@
 		$result = mysqli_query($link, "SELECT * FROM `fav_video` WHERE `user_id`=".$userID." AND `video_id`=".$vidID);
 		if(mysqli_num_rows($result) === 0)
 		{
-			$sql = "INSERT INTO `fav_video`(`user_id`,`video_id`) VALUES ('$userID', '$vidID')";
+			$sql = "INSERT INTO fav_video(`user_id`,`video_id`) VALUES ('$userID', '$vidID')";
 			$retval = mysqli_query($link, $sql);
 			
 		}
