@@ -17,7 +17,7 @@
 		if(mysqli_num_rows($result) === 0)
 		{
 			$sql = "INSERT INTO `fav_video`(`user_id`,`video_id`) VALUES ('$userID', '$vidID')";
-			$retval = mysqli_query($link, $sql) or die("</br>Error: " . mysqli_error($link));
+			$retval = mysqli_query($link, $sql);
 			
 		}
 		echo $_GET['id'];
