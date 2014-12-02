@@ -28,5 +28,7 @@
 	}
 	header('Location:video.php');
 ?>
+<form>
+	<a href = 'video.php'><button type = "submit" name = "go back"> Go Back </button></a>
 </body>
 </html>
