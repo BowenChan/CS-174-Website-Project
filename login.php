@@ -40,7 +40,6 @@ if (isset($_POST["submit"])) {
 			
 			// header('location: index.html'); Doesn't work at the moment.
 		} else {
-			header("location: login.php",true);
 			echo "Invalid Username or Password, Please Try Again";
 		}
 	}

@@ -17,6 +17,7 @@ if($_SESSION['sess_users'] === '')
 {
 	echo "You are not logged in";
 }
+
 print '<h1>Welcome to my site</h1>';
 //print '<p>Hello, ' . $_SESSION['email'] . '!</p>';
 ob_end_flush()
