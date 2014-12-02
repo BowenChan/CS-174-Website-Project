@@ -21,7 +21,7 @@ include 'dbconnect.php';
 
 $email=$_POST['email'];
 $pass=$_POST['pass'];
-$cookie_login= $_COOKIE['user'];
+
 
 function passwordStr($password) // Function to check pw strength
 {
@@ -53,11 +53,6 @@ if(passwordStr($pass) && isset($_POST["submit"])) { // If everything is ok, then
 	}
 }
 
-if (isset($_COOKIE['user']) // If user opts in, store user info to a cookie for 1 minute
-{
-	setcookie ($cookie_email, $email, time() + 60, "/");
-	setcookie ($cookie_pass, $pass, time() + 60, "/")
-}	
 ?>
 
 </body>
