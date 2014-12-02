@@ -18,6 +18,7 @@ Please use a password with at least 1 number and 1 character. Must also be 8 or 
 </form>
 
 <?php
+ob_start();
 include 'dbconnect.php';
 
 $email=$_POST['email'];
@@ -45,7 +46,7 @@ if(passwordStr($pass) && isset($_POST["submit"])) { // If everything is ok, then
 
 	if($result) {
 	echo "Account Successfully Created";
-	// header('location: login.php'); Doesn't quite work yet...
+	header('location: login.php');
 	} else {
 	echo "Failure To Create Account, Please Try Again";
 	}

@@ -15,7 +15,7 @@ Password: <input type="password" name="pass"><br />
 
 <?php
 include 'dbconnect.php';
-
+ob_start();
 if (isset($_POST["submit"])) {
 	$email=$_POST['email'];
 	$pass=$_POST['pass'];

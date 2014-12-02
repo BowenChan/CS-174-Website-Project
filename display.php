@@ -8,6 +8,7 @@
 
 <body>
 <?php 
+	ob_start();
 	function display($db){
 	require_once("connect.php");
 	include($db);
