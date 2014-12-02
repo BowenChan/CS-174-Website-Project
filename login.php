@@ -21,7 +21,7 @@ if (isset($_POST["submit"])) {
 
 	mysql_select_db('cs174') or die("Cannot Select DB");
 
-	$query=mysql_query("SELECT * FROM login WHERE email='".$email."' AND password='".$pass."'");
+	$query=mysql_query("SELECT * FROM users WHERE email='".$email."' AND password='".$pass."'");
 	$numrows=mysql_num_rows($query);
 
 	if($numrows!=0) {
@@ -32,10 +32,10 @@ if (isset($_POST["submit"])) {
 		if($email == $dbemail && $password == $dbpassword) {
 			session_start();
 			$_SESSION['sess_users']=$user;
-			/* REDIRECT USER TO FRONT PAGE */
+			/* REDIRECT USER TO FRONT PAGE AFTER LOGIN */
 			header('location: index.html');
 		} else {
-			echo: "Invalid Username or Password, Please Try Again";
+			echo "Invalid Username or Password, Please Try Again";
 		}
 	}
 }

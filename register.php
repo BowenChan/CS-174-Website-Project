@@ -12,7 +12,7 @@
 
 Email: <input type="text" name="email"><br />
 Password: <input type="password" name="pass"><br />
-<input type="submit" value="Login" name="submit" />
+<input type="submit" value="Register" name="submit" />
 
 </form>
 
@@ -34,7 +34,7 @@ if(passwordStr($pass) && isset($_POST["submit"])) { // If everything is ok, then
 
 	mysql_select_db('cs174') or die("Error: Cannot Select Database"); // Select DB
 
-	$query=mysql_query("SELECT * FROM login WHERE email='".$email."'"); // Check for existing entry
+	$query=mysql_query("SELECT * FROM users WHERE email='".$email."'"); // Check for existing entry
 	$numrows=mysql_num_rows($query);
 
 	if($numrows==0)	{ // If no entries match the registrant
@@ -45,7 +45,7 @@ if(passwordStr($pass) && isset($_POST["submit"])) { // If everything is ok, then
 	echo "Account Successfully Created";
 	header('location: login.php');
 	} else {
-	echo "Failure To Create Account";
+	echo "Failure To Create Account, Please Try Again";
 	}
 	} else {
 	echo "That email is already registered with us. Please try again";
