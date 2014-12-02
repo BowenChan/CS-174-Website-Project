@@ -20,13 +20,13 @@ if (isset($_POST["submit"])) {
 	$email=$_POST['email'];
 	$pass=$_POST['pass'];
 
-	mysql_select_db('cs174') or die("Cannot Select DB");
+	mysqli_select_db($dbc, $db) or die("Cannot Select DB");
 
-	$query=mysql_query("SELECT * FROM users WHERE email='".$email."' AND password='".$pass."'");
-	$numrows=mysql_num_rows($query);
+	$query=mysqli_query($dbc, "SELECT * FROM users WHERE email='".$email."' AND password='".$pass."'");
+	$numrows=mysqli_num_rows($query);
 
 	if($numrows!=0) {
-		while($row=mysql_fetch_assoc($query)) { // When you found the row w/ the login info
+		while($row=mysqli_fetch_assoc($query)) { // When you found the row w/ the login info
 			$dbemail=$row['email'];
 			$dbpassword=$row['password'];
 		}
@@ -46,7 +46,7 @@ if (isset($_COOKIE['user']) // If user opts in, store user info to a cookie for 
 	$cookie_pass= "Password";
 	
 	setcookie ($cookie_email, $email, time() + 60, "/");
-	setcookie ($cookie_pass, $pass, time() + 60, "/")
+	setcookie ($cookie_pass, $pass, time() + 60, "/");
 }
 }
 ?>

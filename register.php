@@ -33,14 +33,14 @@ function passwordStr($password) // Function to check pw strength
 
 if(passwordStr($pass) && isset($_POST["submit"])) { // If everything is ok, then continue to submit.
 
-	mysql_select_db('cs174') or die("Error: Cannot Select Database"); // Select DB
+	mysqli_select_db($dbc, $db) or die("Error: Cannot Select Database"); // Select DB
 
-	$query=mysql_query("SELECT * FROM users WHERE email='".$email."'"); // Check for existing entry
-	$numrows=mysql_num_rows($query);
+	$query=mysqli_query($dbc, "SELECT * FROM users WHERE email='".$email."'"); // Check for existing entry
+	$numrows=mysqli_num_rows($query);
 
 	if($numrows==0)	{ // If no entries match the registrant
 	$sql="INSERT INTO login(email, password) VALUES('$email', '$pass')"; // Insert account into DB.
-	$result=mysql_query($sql);
+	$result=mysqli_query($dbc, $sql);
 
 	if($result) {
 	echo "Account Successfully Created";
