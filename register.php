@@ -39,7 +39,7 @@ if(passwordStr($pass) && isset($_POST["submit"])) { // If everything is ok, then
 	$numrows=mysqli_num_rows($query);
 
 	if($numrows==0)	{ // If no entries match the registrant
-	$sql="INSERT INTO login(email, password) VALUES('$email', '$pass')"; // Insert account into DB.
+	$sql="INSERT INTO users(email, password) VALUES('$email', '$pass')"; // Insert account into DB.
 	$result=mysqli_query($dbc, $sql);
 
 	if($result) {
