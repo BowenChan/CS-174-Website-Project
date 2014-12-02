@@ -33,8 +33,9 @@ if (isset($_POST["submit"])) {
 		if($email == $dbemail && $pass == $dbpassword) {
 			session_start();
 			$_SESSION['sess_users']=$user;
+			echo "You are now logged in";
 			/* REDIRECT USER TO FRONT PAGE AFTER LOGIN */
-			header('location: index.html');
+			// header('location: index.html'); Doesn't work at the moment.
 		} else {
 			echo "Invalid Username or Password, Please Try Again";
 		}

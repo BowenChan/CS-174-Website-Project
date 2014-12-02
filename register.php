@@ -12,6 +12,7 @@
 
 Email: <input type="text" name="email"><br />
 Password: <input type="password" name="pass"><br />
+Please use a password with at least 1 number and 1 character. Must also be 8 or more characters but 25 or less.
 <input type="submit" value="Register" name="submit" />
 
 </form>
