@@ -8,6 +8,7 @@
 <body>
 <?php
 	session_start();
+	ob_start();
 	include('header.html');
 	require_once("connect.php");
 	include('selectdbfav.php');
