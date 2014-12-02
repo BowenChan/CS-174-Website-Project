@@ -6,9 +6,8 @@
 </head>
 
 <body>
-<?php
-/*File name: enterData.pho
-*/
+<?php include('header.html');
+
 include ("dbconnect.php");
 ?>
 <h2>Enter video information</h2>

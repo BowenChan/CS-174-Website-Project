@@ -24,8 +24,11 @@
 		header('Location: video.php');
 	}
 	else{
-		header('Location: index.php');
+		header('Location: video.php');
 	}
+	header('Location:video.php');
 ?>
+<form>
+	<a href = 'video.php'><button type = "button" name = "go back"> Go Back </button></a>
 </body>
 </html>
