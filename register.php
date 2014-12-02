@@ -25,7 +25,7 @@ $pass=$_POST['pass'];
 
 function passwordStr($password) // Function to check pw strength
 {
-	if ((strlen($pass) >= 8) && preg_match('/[a-z]+[0-9]+/', $pass)) {
+	if (!(strlen($pass) < 8) && preg_match('/[a-z]+[0-9]+/', $pass)) {
 		return TRUE;
 	}
 	else return FALSE;
