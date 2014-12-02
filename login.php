@@ -17,6 +17,17 @@ Password: <input type="password" name="pass"><br />
 include 'dbconnect.php';
 session_start();
 ob_start();
+if (isset($_COOKIE['user'])) // If user opts in, store user info to a cookie for 1 minute
+{
+	$cookie_email= "User";
+	$cookie_pass= "Password";
+	$email=$_POST['email'];
+	$pass=$_POST['pass'];
+
+	setcookie ($cookie_email, $email, time() + 60, "/");
+	setcookie ($cookie_pass, $pass, time() + 60, "/");
+}
+
 if (isset($_POST["submit"])) {
 	$email=$_POST['email'];
 	$pass=$_POST['pass'];
@@ -37,26 +48,16 @@ if (isset($_POST["submit"])) {
 			if (isset($_COOKIE['PHPSESSID']))
        			 session_id($_COOKIE['PHPSESSID']); 
 			/* REDIRECT USER TO FRONT PAGE AFTER LOGIN */
-			header("location: register.php");
+			header("location: welcome.php");
+			
 			exit();
 			// header('location: index.html'); Doesn't work at the moment.
 		} else {
 			echo "Invalid Username or Password, Please Try Again";
 		}
 	}
-	if (isset($_COOKIE['user'])) // If user opts in, store user info to a cookie for 1 minute
-{
-	$cookie_email= "User";
-	$cookie_pass= "Password";
-	$email=$_POST['email'];
-	$pass=$_POST['pass'];
-
-	setcookie ($cookie_email, $email, time() + 60, "/");
-	setcookie ($cookie_pass, $pass, time() + 60, "/");
-}
 
 }
-
 ?>
 </body>
 </html>
