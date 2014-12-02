@@ -1,7 +1,8 @@
 
-<?php include('header.html');?>
-<?php include("dbconnect.php"); 
+<?php include("dbconnect.php");
+include('header.html'); 
 //recover the form variable values.
+if(!empty($link) || !empty($title) || !empty($image)){
 $title= mysql_real_escape_string(trim(strip_tags($_POST['title'])),$dbc);
 $link= mysql_real_escape_string(trim(strip_tags($_POST['link'])),$dbc);
 $length= $_POST['length'];
@@ -21,7 +22,7 @@ $query = "insert into fun_video "
         ;
 
 //var_dump($query);	   
-if(!empty($link) || !empty($title) || !empty($image)){
+
 	mysqli_query($conn,$query);
 	print "<h2>Thanks!!</h2>";
 }
