@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!doctype html>
 <html>
 <head>
@@ -10,6 +8,10 @@ session_start();
 <?php include('header.php');?>
 <body>
 <?php 
+
+session_start();
+ob_start();
+
 //define('TITLE', 'welcome');
 //include ('header.html');
 if($_SESSION['sess_users'] === '');
