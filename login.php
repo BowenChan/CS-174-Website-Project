@@ -34,7 +34,7 @@ if (isset($_POST["submit"])) {
 			session_start();
 			$_SESSION['sess_users']=$user;
 			/* REDIRECT USER TO FRONT PAGE AFTER LOGIN */
-			header('location: index.html');
+			header('location: welcome.php');
 		} else {
 			echo "Invalid Username or Password, Please Try Again";
 		}
