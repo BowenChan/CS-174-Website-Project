@@ -50,14 +50,12 @@ if (isset($_POST["submit"])) {
        			 session_id($_COOKIE['PHPSESSID']); 
 			/* REDIRECT USER TO FRONT PAGE AFTER LOGIN */
 			header("location: welcome.php");
-			
 			exit();
 			// header('location: index.html'); Doesn't work at the moment.
 		} else {
 			echo "Invalid Username or Password, Please Try Again";
 		}
 	}
-
 }
 ?>
 </body>
