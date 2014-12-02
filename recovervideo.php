@@ -1,6 +1,8 @@
 <?php
 
-include("dbconnect.php"); ?>
+include("dbconnect.php"); 
+include('header.html');
+?>
 
 <h2>You wish to modify the information on
 <?php

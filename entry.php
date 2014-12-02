@@ -1,11 +1,5 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Entry</title>
-</head>
 
-<body>
+<?php include('header.html');?>
 <?php include("dbconnect.php"); 
 //recover the form variable values.
 $title= mysql_real_escape_string(trim(strip_tags($_POST['title'])),$dbc);
@@ -34,6 +28,4 @@ if(!empty($link) || !empty($title) || !empty($image)){
 else 
 	print "<h2>Your input is incomplete and has not be added!</h2>";
 ?>
-<h2><a href="viewData.php">View My Video Collection!!!</a></h2>
-</body>
-</html>
+<h2><a href="video.php">View My Video Collection!!!</a></h2>
