@@ -38,13 +38,14 @@ if (isset($_POST["submit"])) {
 	$numrows=mysqli_num_rows($query);
 
 	if($numrows!=0) {
-		while($row=mysqli_fetch_assoc($query)) { // When you found the row w/ the login info
+		while($row=mysqli_fetch_assoc($query)) { // When you found the row w/ the login info//
 			$dbemail=$row['email'];
 			$dbpassword=$row['password'];
 		}
+
 		if($email == $dbemail && $pass == $dbpassword) {
 			$_SESSION['sess_users']=$dbemail;
-			echo "You are now logged in";
+			//echo "You are now logged in";
 			if (isset($_COOKIE['PHPSESSID']))
        			 session_id($_COOKIE['PHPSESSID']); 
 			/* REDIRECT USER TO FRONT PAGE AFTER LOGIN */
