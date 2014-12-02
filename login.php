@@ -30,7 +30,7 @@ if (isset($_POST["submit"])) {
 			$dbemail=$row['email'];
 			$dbpassword=$row['password'];
 		}
-		if($email == $dbemail && $password == $dbpassword) {
+		if($email == $dbemail && $pass == $dbpassword) {
 			session_start();
 			$_SESSION['sess_users']=$user;
 			/* REDIRECT USER TO FRONT PAGE AFTER LOGIN */
