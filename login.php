@@ -49,8 +49,10 @@ if (isset($_POST["submit"])) {
 			if (isset($_COOKIE['PHPSESSID']))
        			 session_id($_COOKIE['PHPSESSID']); 
 			/* REDIRECT USER TO FRONT PAGE AFTER LOGIN */
-			header("location: welcome.php");
-			exit();
+			ob_start();
+			header("Location:http://www.sjsu-cs.org/classes/cs174/sec2/chan/cs174project/welcome.php");
+			ob_flush();
+			
 			// header('location: index.html'); Doesn't work at the moment.
 		} else {
 			echo "Invalid Username or Password, Please Try Again";
