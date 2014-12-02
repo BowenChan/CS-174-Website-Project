@@ -34,6 +34,7 @@ if (isset($_POST["submit"])) {
 			session_start();
 			$_SESSION['sess_users']=$user;
 			echo "You are now logged in";
+			echo $_SESSION['sess_users'];
 			/* REDIRECT USER TO FRONT PAGE AFTER LOGIN */
 			header('Location: welcome.php');
 			// header('location: index.html'); Doesn't work at the moment.
