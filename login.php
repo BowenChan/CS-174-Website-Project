@@ -47,7 +47,7 @@ if (isset($_COOKIE['user']) // If user opts in, store user info to a cookie for 
 	
 	setcookie ($cookie_email, $email, time() + 60, "/");
 	setcookie ($cookie_pass, $pass, time() + 60, "/")
-}	
+}
 }
 ?>
 </body>
