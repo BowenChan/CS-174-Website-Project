@@ -10,6 +10,7 @@
 Email: <input type="text" name="email"><br />
 Password: <input type="password" name="pass"><br />
 <input type="submit" value="Login" name="submit"><br />
+<pre><input type="checkbox" name="store_login" value="user">Remember Me<br></pre>
 </form>
 
 <?php
@@ -38,6 +39,15 @@ if (isset($_POST["submit"])) {
 			echo "Invalid Username or Password, Please Try Again";
 		}
 	}
+
+if (isset($_COOKIE['user']) // If user opts in, store user info to a cookie for 1 minute
+{
+	$cookie_email= "User";
+	$cookie_pass= "Password";
+	
+	setcookie ($cookie_email, $email, time() + 60, "/");
+	setcookie ($cookie_pass, $pass, time() + 60, "/")
+}	
 }
 ?>
 </body>

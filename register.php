@@ -22,6 +22,7 @@ include 'dbconnect.php';
 $email=$_POST['email'];
 $pass=$_POST['pass'];
 
+
 function passwordStr($password) // Function to check pw strength
 {
 	if (strlen($pass) >= 8 && preg_match('/[a-z]+[0-9]+/', $pass)) {
@@ -51,6 +52,7 @@ if(passwordStr($pass) && isset($_POST["submit"])) { // If everything is ok, then
 	echo "That email is already registered with us. Please try again";
 	}
 }
+
 ?>
 
 </body>
