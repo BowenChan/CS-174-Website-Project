@@ -34,7 +34,8 @@ if (isset($_POST["submit"])) {
 		if($email == $dbemail && $pass == $dbpassword) {
 			$_SESSION['sess_users']=$dbemail;
 			echo "You are now logged in";
-			echo $_SESSION['sess_users'];
+			if (isset($_COOKIE['PHPSESSID']))
+       			 session_id($_COOKIE['PHPSESSID']); 
 			/* REDIRECT USER TO FRONT PAGE AFTER LOGIN */
 			header("location: register.php");
 			exit();

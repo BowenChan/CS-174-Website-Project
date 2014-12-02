@@ -12,7 +12,10 @@ session_start();
 <?php 
 //define('TITLE', 'welcome');
 //include ('header.html');
-echo $_SESSION['sess_user'];
+if($_SESSION['sess_users'] === '');
+{
+	echo "goddammit";
+}
 print '<h1>Welcome to my site</h1>';
 //print '<p>Hello, ' . $_SESSION['email'] . '!</p>';
 ?>
