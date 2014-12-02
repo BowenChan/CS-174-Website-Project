@@ -24,7 +24,7 @@
 		header('Location: video.php');
 	}
 	else{
-		header('Location: index.php');
+		header('Location: video.php');
 	}
 ?>
 </body>
