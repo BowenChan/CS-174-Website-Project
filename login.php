@@ -35,11 +35,8 @@ if (isset($_POST["submit"])) {
 			$_SESSION['sess_users']=$user;
 			echo "You are now logged in";
 			/* REDIRECT USER TO FRONT PAGE AFTER LOGIN */
-<<<<<<< HEAD
 			header('Location: welcome.php');
-=======
 			// header('location: index.html'); Doesn't work at the moment.
->>>>>>> 8a112501a0ea90fb86c8840dc4a206c1eb939fe3
 		} else {
 			echo "Invalid Username or Password, Please Try Again";
 		}
