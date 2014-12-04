@@ -18,7 +18,7 @@
 		$result = mysqli_query($link, "SELECT * FROM `fav_video` WHERE `user_id`='".$userID."' AND `video_id`='".$vidID. "'");
 		if(mysqli_num_rows($result) === 0)
 		{
-			$sql = "INSERT INTO fav_video(`user_id`,`video_id`) VALUES ('$userID', '$vidID')";
+			$sql = "INSERT INTO fav_video(user_id,video_id) VALUES ('$userID', '$vidID')";
 			$retval = mysqli_query($link, $sql);
 			
 		}
@@ -29,7 +29,7 @@
 	}
 	header('Location:video.php');
 ?>
-<form>
+<form action = "favoriteVideo.php">
 	<a href = 'video.php'><button type = "button" name = "go back"> Go Back </button></a>
 </form>
 </body>
