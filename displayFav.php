@@ -14,12 +14,6 @@
 	include('selectdbfav.php');
 	
 	
-	/*
-	$res = mysqli_query($link, "SELECT * FROM `fun_video` ORDER BY id ASC")
-	or die("This is failing");
-	*/
-	$organize = "";
-	$video_data = array();
 	//number of display per page
 	$display = 10;
 	$num_rec = null;
@@ -29,8 +23,8 @@
 		$num_rec = 0;
 	}
 	//detemine the pages
-	else($num_rec != mysqli_fetch_array(mysqli_query($link,"SELECT `video_id` FROM `". $table ."`WHERE `user_id`=" .  $_SESSION['sess_users']),MYSQLI_NUM));
-		$q = mysqli_query($link,"SELECT COUNT(`video_id`) FROM `".$table ."` WHERE `user_id`=" .  $_SESSION['sess_users']);
+	else($num_rec != mysqli_fetch_array(mysqli_query($link,"SELECT `video_id` FROM `". $table ."`WHERE `user_id`='" .  $_SESSION['sess_users']."'"),MYSQLI_NUM));
+		$q = mysqli_query($link,"SELECT COUNT(`video_id`) FROM `".$table ."` WHERE `user_id`='" .  $_SESSION['sess_users']. "'");
 		$row = mysqli_fetch_array($q,MYSQLI_NUM);
 		
 		$num_rec = $row[0];

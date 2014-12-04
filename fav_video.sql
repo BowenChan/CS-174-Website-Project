@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `fav_video` (
+  `id` int(50) NOT NULL,
   `user_id` int(11) NOT NULL,
   `video_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
