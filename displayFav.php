@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 </head>
-
+<link rel = "stylesheet" href = "table.css">
 <body>
 <?php
 	session_start();
