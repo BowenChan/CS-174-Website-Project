@@ -21,11 +21,8 @@ Please use a password with at least 1 number and 1 character. Must also be 8 or 
 ob_start();
 include 'dbconnect.php';
 
-$email=$_POST['email'];
-$pass=$_POST['pass'];
-if(isset($_POST['submit'])) {
-	$submit = $_POST['submit'];
-}
+$email = (isset($_POST['email']) ? $_POST['email'] : null);
+$pass = (isset($_POST['pass']) ? $_POST['pass'] : null);
 
 function passwordStr($password) // Function to check pw strength
 {
