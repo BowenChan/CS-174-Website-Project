@@ -23,7 +23,9 @@ include 'dbconnect.php';
 
 $email=$_POST['email'];
 $pass=$_POST['pass'];
-
+if(isset($_POST['submit'])) {
+	$submit = $_POST['submit'];
+}
 
 function passwordStr($password) // Function to check pw strength
 {
