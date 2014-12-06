@@ -59,7 +59,7 @@
          </ul>
     </li>
     <li><a href = "video.php">View All</a></li>
-    <li><a href = "enterData.php">Enter a Video</a></li>
+    <li><a href = "modify.php">Modify A Video</a></li>
     <li><a href = "login.php">Login </a></li>
     <li><a href = "register.php"> Register </a></li>
     <li><a href = "displayFav.php"> Display Favorite </a></li>
