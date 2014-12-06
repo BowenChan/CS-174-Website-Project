@@ -28,7 +28,7 @@
 
     <p><a href="register.php">Register</a></p>
     
-    <p><a href="login.php">Login</a>a></p>
+    <p><a href="login.php">Login</a></p>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
