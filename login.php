@@ -2,12 +2,12 @@
 include 'dbconnect.php';
 session_start();
 ob_start();
-if (isset($_COOKIE['user'])) // If user opts in, store user info to a cookie for 30 minutes
+if (isset($_COOKIE['user'])) // If user opts in, store user info to a cookie for 30 minutes (testing purposes)
 {
-	$cookie_email= "User";
-	$cookie_pass= "Password";
-	$email=$_POST['email'];
-	$pass=$_POST['pass'];
+	$cookie_email = "User";
+	$cookie_pass = "Password";
+	$email = $_POST['email'];
+	$pass = $_POST['pass'];
 
 	setcookie ($cookie_email, $email, time() + 1800, "/");
 	setcookie ($cookie_pass, $pass, time() + 1800, "/");
