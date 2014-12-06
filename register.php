@@ -53,6 +53,9 @@ if(passwordStr($pass) && isset($_POST["submit"])) { // If everything is ok, then
 	echo "That email is already registered with us. Please try again";
 	}
 }
+else if(passwordStr($pass) == FALSE && isset($_POST["submit"])) {
+	echo "<font color = 'red'>Your password did not meet the strength requirement. Please try again</font>";
+}
 
 ?>
 
