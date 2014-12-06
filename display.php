@@ -60,9 +60,9 @@
 ?>
 	<table style="width:100%">
     	<tr>
-    	<th style = "border:none"> id </th>
-        <th style = "border:none"> video title </th>
-        <th style = "border:none"> video length </th>
+    	<th style = "border:none"> ID </th>
+        <th style = "border:none"> Video Title </th>
+        <th style = "border:none"> Video Length </th>
         <th style = "border:none"> Highest Resolution </th>
         <th style = "border:none"> Description </th>
         <th style = "border:none"> View Count </th>
