@@ -10,7 +10,7 @@
 <?php 
 
 ob_start();
-session_start();
+// session_start(); Don't need to call session start, it already is started when you login.
 
 //define('TITLE', 'welcome');
 if($_SESSION['sess_users'] === '')
