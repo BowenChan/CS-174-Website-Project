@@ -23,7 +23,7 @@
 		$num_rec = 0;
 	}
 	//detemine the pages
-	else($num_rec != mysqli_fetch_array(mysqli_query($link,"SELECT `video_id` FROM `". $table ."`WHERE `user_id`='" .  $_SESSION['sess_users']."'"),MYSQLI_NUM));
+	else($num_rec != mysqli_fetch_array(mysqli_query($link,"SELECT COUNT(`video_id`) FROM `". $table ."`WHERE `user_id`='" .  $_SESSION['sess_users']."'"),MYSQLI_NUM));
 		$q = mysqli_query($link,"SELECT COUNT(`video_id`) FROM `".$table ."` WHERE `user_id`='" .  $_SESSION['sess_users']. "'");
 		$row = mysqli_fetch_array($q,MYSQLI_NUM);
 		
@@ -87,11 +87,11 @@
 	mysqli_close($link);
 	
 	
-	include('pagedisplay.php');
+	include('pagedisplayfav.php');
 	
 	echo '</p>'; // Close the paragraph.
 	echo '</table>';
-	include('pagedisplay.php');
+	include('pagedisplayfav.php');
 	}
 	else
 	{

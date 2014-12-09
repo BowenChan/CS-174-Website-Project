@@ -22,13 +22,13 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Welcome to the world of Team Project 3!</h1>
+    <h1>Welcome To Team 3's Video Website!</h1>
 
     <p><a href="login.php">Access my video collection</a></p>
 
     <p><a href="register.php">Register</a></p>
-
-
+    
+    <p><a href="login.php">Login</a></p>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

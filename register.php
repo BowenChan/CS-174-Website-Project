@@ -13,7 +13,7 @@
 Email: <input type="text" name="email"><br />
 Password: <input type="password" name="pass"><br />
 Please use a password with at least 1 number and 1 character. Must also be 8 or more characters but 25 or less.
-<input type="submit" value="Register" name="submit" />
+<p><input type="submit" value="Register" name="submit" /></p>
 
 </form>
 
@@ -21,9 +21,8 @@ Please use a password with at least 1 number and 1 character. Must also be 8 or 
 ob_start();
 include 'dbconnect.php';
 
-$email=$_POST['email'];
-$pass=$_POST['pass'];
-
+$email = (isset($_POST['email']) ? $_POST['email'] : null);
+$pass = (isset($_POST['pass']) ? $_POST['pass'] : null);
 
 function passwordStr($password) // Function to check pw strength
 {
@@ -53,6 +52,9 @@ if(passwordStr($pass) && isset($_POST["submit"])) { // If everything is ok, then
 	} else {
 	echo "That email is already registered with us. Please try again";
 	}
+}
+else if(passwordStr($pass) == FALSE && isset($_POST["submit"])) {
+	echo "<font color = 'red'>Your password did not meet the strength requirement. Please try again</font>";
 }
 
 ?>

@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<?php session_start() ?>
+<?php // session_start() Session already started during login. Don't need to do it again.?>
 <nav width="100%" height="56" >
   <ul>
    	<li><a href = "welcome.php">Home</a></li>
@@ -59,7 +59,7 @@
          </ul>
     </li>
     <li><a href = "video.php">View All</a></li>
-    <li><a href = "enterData.php">Enter a Video</a></li>
+    <li><a href = "modify.php">Modify A Video</a></li>
     <li><a href = "login.php">Login </a></li>
     <li><a href = "register.php"> Register </a></li>
     <li><a href = "displayFav.php"> Display Favorite </a></li>

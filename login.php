@@ -21,6 +21,7 @@ Password: <input type="password" name="pass"><br />
 include 'dbconnect.php';
 session_start();
 ob_start();
+<<<<<<< HEAD
 
 if (isset($_POST['email']) && isset($_POST['pass')) 
 {
@@ -35,6 +36,17 @@ if (isset($_POST['email']) && isset($_POST['pass'))
 		setcookie ($cookie_pass, $pass, time() + 60, "/");
 		}
 		header('Location: welcome.php');
+=======
+if (isset($_COOKIE['user'])) // If user opts in, store user info to a cookie for 30 minutes (testing purposes)
+{
+	$cookie_email = "User";
+	$cookie_pass = "Password";
+	$email = $_POST['email'];
+	$pass = $_POST['pass'];
+
+	setcookie ($cookie_email, $email, time() + 1800, "/");
+	setcookie ($cookie_pass, $pass, time() + 1800, "/");
+>>>>>>> 8a6e6d222f61506384c0331e04e89ae4de588828
 }
 
 if (isset($_POST["submit"])) {
