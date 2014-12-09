@@ -1,16 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<title>Login</title>
+</head>
+<body>
+
+<h3>Login Form</h3>
+<form action="login.php" method ="POST">
+Email: <input type="text" name="email"><br />
+Password: <input type="password" name="pass"><br />
+<input type="submit" value="Login" name="submit"><br />
+<pre><input type="checkbox" name="store_login" value="user">Remember Me<br></pre>
+</form>
+
+
+</body>
+</html>
+
 <?php
 include 'dbconnect.php';
 session_start();
 ob_start();
-if (isset($_COOKIE['user'])) // If user opts in, store user info to a cookie for 1 minute
-{
-	$cookie_email= "User";
-	$cookie_pass= "Password";
-	$email=$_POST['email'];
-	$pass=$_POST['pass'];
 
-	setcookie ($cookie_email, $email, time() + 60, "/");
-	setcookie ($cookie_pass, $pass, time() + 60, "/");
+if (isset($_POST['email']) && isset($_POST['pass')) 
+{
+	if (isset($_POST['user'])) // If user opts in, store user info to a cookie for 1 minute
+		{
+			$cookie_email= "User";
+			$cookie_pass= "Password";
+			$email=$_POST['email'];
+			$pass=$_POST['pass'];
+
+		setcookie ($cookie_email, $email, time() + 60, "/");
+		setcookie ($cookie_pass, $pass, time() + 60, "/");
+		}
+		header('Location: welcome.php');
 }
 
 if (isset($_POST["submit"])) {
@@ -44,22 +68,5 @@ if (isset($_POST["submit"])) {
 		}
 	}
 }
+
 ?>
-<!doctype html>
-<html>
-<head>
-<title>Login</title>
-</head>
-<body>
-
-<h3>Login Form</h3>
-<form action="login.php" method ="POST">
-Email: <input type="text" name="email"><br />
-Password: <input type="password" name="pass"><br />
-<input type="submit" value="Login" name="submit"><br />
-<pre><input type="checkbox" name="store_login" value="user">Remember Me<br></pre>
-</form>
-
-
-</body>
-</html>
