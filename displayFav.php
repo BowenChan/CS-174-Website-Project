@@ -50,19 +50,19 @@
 	$q =  mysqli_query($link,"SELECT * FROM `fun_video` INNER JOIN `fav_video` ON fav_video.video_id = fun_video.id");
 	}
 ?>
-	<table style="width:100%">
-    	<tr>
-    	<th style = "border:none"> id </th>
-        <th style = "border:none"> video title </th>
-        <th style = "border:none"> video length </th>
-        <th style = "border:none"> Highest Resolution </th>
-        <th style = "border:none"> Description </th>
-        <th style = "border:none"> View Count </th>
-        <th style = "border:none"> Video Type </th>
-        <th style = "border:none"> Icon Image </th>
-        <th style = "border:none"> Video Tags </th>
-        <th style = "border:none"> Favorite </th>
-        </tr>
+<table style="width:100%">
+<tr>
+  <th style = "border:none"> id </th>
+  <th style = "border:none"> video title </th>
+  <th style = "border:none"> video length </th>
+  <th style = "border:none"> Highest Resolution </th>
+  <th style = "border:none"> Description </th>
+  <th style = "border:none"> View Count </th>
+  <th style = "border:none"> Video Type </th>
+  <th style = "border:none"> Icon Image </th>
+  <th style = "border:none"> Video Tags </th>
+  <th style = "border:none"> Favorite </th>
+</tr>
 <?php
 
 	if($num_rec != 0)

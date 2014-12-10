@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-	<link rel = "stylesheet" href = "table.css">
+<link rel = "stylesheet" href = "table.css">
 <title>Untitled Document</title>
 </head>
 
@@ -58,19 +58,19 @@
 	$q =  mysqli_query($link,"SELECT * FROM `" . $table . "` $constr1 ORDER by $order LIMIT $start, $display");
 	}
 ?>
-	<table style="width:100%">
-    	<tr>
-    	<th style = "border:none"> ID </th>
-        <th style = "border:none"> Video Title </th>
-        <th style = "border:none"> Video Length </th>
-        <th style = "border:none"> Highest Resolution </th>
-        <th style = "border:none"> Description </th>
-        <th style = "border:none"> View Count </th>
-        <th style = "border:none"> Video Type </th>
-        <th style = "border:none"> Icon Image </th>
-        <th style = "border:none"> Video Tags </th>
-        <th style = "border:none"> Favorite </th>
-        </tr>
+<table style="width:100%">
+<tr>
+  <th style = "border:none"> ID </th>
+  <th style = "border:none"> Video Title </th>
+  <th style = "border:none"> Video Length </th>
+  <th style = "border:none"> Highest Resolution </th>
+  <th style = "border:none"> Description </th>
+  <th style = "border:none"> View Count </th>
+  <th style = "border:none"> Video Type </th>
+  <th style = "border:none"> Icon Image </th>
+  <th style = "border:none"> Video Tags </th>
+  <th style = "border:none"> Favorite </th>
+</tr>
 <?php
 	if($num_rec != 0)
 	{
@@ -108,4 +108,5 @@
 	}
 ?>
 </body>
-</html>'
+</html>
+'

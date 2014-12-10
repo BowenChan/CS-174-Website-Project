@@ -14,13 +14,13 @@ if ($num_pages > 1) {
 	
 	// If it's not the first page, make a Previous button:
 	if ($current_page != 1) {
-		echo '<a href="displayFav.php?s=' . ($start - $display) . '&p=' . $num_pages . '&sort=' . $sort . '&constr=' . $constr .'">Previous</a> ';
+		echo '<a href="displayFav.php?s=' . ($start - $display) . '&p=' . $num_pages .'">Previous</a> ';
 	}
 	
 	// Make all the numbered pages:
 	for ($i = 1; $i <= $num_pages; $i++) {
 		if ($i != $current_page) {
-			echo '<a href="displayFav.php?s=' . (($display * ($i - 1))) . '&p=' . $num_pages . '&sort=' . $sort . '&constr=' . $constr .'">' . $i . '</a> ';
+			echo '<a href="displayFav.php?s=' . (($display * ($i - 1))) . '&p=' . $num_pages .'">' . $i . '</a> ';
 		} else {
 			echo $i . ' ';
 		}
@@ -28,7 +28,7 @@ if ($num_pages > 1) {
 	
 	// If it's not the last page, make a Next button:
 	if ($current_page != $num_pages) {
-		echo '<a href="displayFav.php?s=' . ($start + $display) . '&p=' . $num_pages . '&sort=' . $sort . '&constr=' . $constr . '">Next</a>';
+		echo '<a href="displayFav.php?s=' . ($start + $display) . '&p=' . $num_pages . '">Next</a>';
 	}
 	
 	echo '</p>'; // Close the paragraph.
