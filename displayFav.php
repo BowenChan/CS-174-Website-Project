@@ -47,7 +47,7 @@
 	{
 		$start = 0;
 	}
-	$q =  mysqli_query($link,"SELECT * FROM `fun_video` INNER JOIN `fav_video` ON fav_video.video_id = fun_video.id");
+	$q =  mysqli_query($link,"SELECT * FROM `fun_video` INNER JOIN `fav_video` ON fav_video.video_id = fun_video.id AND fav_video.user_id = '" . $_SESSION['sess_users'] . "'");
 	}
 ?>
 <table style="width:100%">
@@ -71,7 +71,7 @@
 	{
 		$_SESSION['prev'] = $_SERVER['REQUEST_URI'];
 		echo "<tr style=text-align:center> ". 
-		"<td>" . $row['id'] . "</td>" .
+		"<td>" . $row['video_id'] . "</td>" .
 		"<td>" . $row['title'] . "</td>" .
 		"<td>" . $row['videolength'] . " minutes</td>" .
 		"<td>" . $row['highestresolution'] . "</td>" .

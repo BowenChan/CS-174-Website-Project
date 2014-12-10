@@ -27,11 +27,13 @@
 			$sort = 'id';
 			break;
 	}
-	if(isset($vidarr)){
-		$vidarr = $vidarr;
+	if(isset($_SESSION['vidarr'])){
+		$vidarr = $_SESSION['vidarr'];
 	}
 	else
-		$vidarr =0;
+	{
+		$vidarr = 0;
+	}
 
 	if($vidarr == 0)
 	{
