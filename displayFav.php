@@ -23,8 +23,8 @@
 		$num_rec = 0;
 	}
 	//detemine the pages
-	else($num_rec != mysqli_fetch_array(mysqli_query($link,"SELECT COUNT(`video_id`) FROM `". $table ."`WHERE `user_id`='" .  $_SESSION['sess_users']."'"),MYSQLI_NUM));
-		$q = mysqli_query($link,"SELECT COUNT(`video_id`) FROM `".$table ."` WHERE `user_id`='" .  $_SESSION['sess_users']. "'");
+	else($num_rec != mysqli_fetch_array(mysqli_query($link,"SELECT COUNT(*) FROM `". $table ."`WHERE `user_id`='" .  $_SESSION['sess_users']."'"),MYSQLI_NUM));
+		$q = mysqli_query($link,"SELECT COUNT(*) FROM `".$table ."` WHERE `user_id`='" .  $_SESSION['sess_users']. "'");
 		$row = mysqli_fetch_array($q,MYSQLI_NUM);
 		
 		$num_rec = $row[0];
@@ -42,12 +42,13 @@
 	if(isset($_GET['s']))
 	{
 		$start = $_GET['s'];
+		
 	}
 	else
 	{
 		$start = 0;
 	}
-	$q =  mysqli_query($link,"SELECT * FROM `fun_video` INNER JOIN `fav_video` ON fav_video.video_id = fun_video.id AND fav_video.user_id = '" . $_SESSION['sess_users'] . "'");
+	$q =  mysqli_query($link,"SELECT * FROM `fun_video` INNER JOIN `fav_video` ON fav_video.video_id = fun_video.id AND fav_video.user_id = '" . $_SESSION['sess_users'] . "' LIMIT $start, $display");
 	}
 ?>
 <table style="width:100%">
@@ -61,7 +62,7 @@
   <th style = "border:none"> Video Type </th>
   <th style = "border:none"> Icon Image </th>
   <th style = "border:none"> Video Tags </th>
-  <th style = "border:none"> Favorite </th>
+  <!--<th style = "border:none"> Favorite </th>-->
 </tr>
 <?php
 
@@ -80,7 +81,7 @@
 		"<td>" . $row['language'] . "</td>" .
 		"<td><a target = '_blank' href = " . $row['videolink'] . "><img src =" . $row['iconimage'] . " alt=picture></a></td>" .
 		"<td>" . $row['tag'] . "</td>" .
-		"<td><form><a href='favoriteVideo.php?id=". $row['id']. "'><button type = 'button' name = 'vidID' value = '". $row['id'] . "'> Favorite </button></a></form></td>" . 	
+		//"<td><form><a href='favoriteVideo.php?id=". $row['id']. "'><button type = 'button' name = 'vidID' value = '". $row['id'] . "'> Favorite </button></a></form></td>" . 	
 		"</tr>";
 	}
 	mysqli_free_result($q);
