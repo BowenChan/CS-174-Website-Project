@@ -1,5 +1,3 @@
-<!doctype html>
-
 <?php
 include 'dbconnect.php';
 session_start();
@@ -8,8 +6,9 @@ ob_start();
 
 if (isset($_POST['email']) && isset($_POST['pass']))
 {
-	if (isset($_POST['user'])) // If user opts in, store user info to a cookie for 1 minute
+	if (isset($_POST['store_login'])) // If user opts in, store user info to a cookie for 1 minute
 		{
+			echo "enter";
 			$cookie_email= "User";
 			$cookie_pass= "Password";
 			$email=$_POST['email'];
@@ -18,13 +17,13 @@ if (isset($_POST['email']) && isset($_POST['pass']))
 		setcookie ($cookie_email, $email, time() + 60, "/");
 		setcookie ($cookie_pass, $pass, time() + 60, "/");
 		}
-		header('Location: welcome.php');
+		//header('Location: welcome.php');
 }
 
 
 if (isset($_POST["submit"])) {
-	$email=$_POST['email'];
-	$pass=$_POST['pass'];
+	$email = $_POST['email'];
+	$pass = $_POST['pass'];
 
 	mysqli_select_db($dbc, $db) or die("Cannot Select DB");
 
@@ -33,12 +32,12 @@ if (isset($_POST["submit"])) {
 
 	if($numrows!=0) {
 		while($row=mysqli_fetch_assoc($query)) { // When you found the row w/ the login info//
-			$dbemail=$row['email'];
-			$dbpassword=$row['password'];
+			$dbemail = $row['email'];
+			$dbpassword = $row['password'];
 		}
 
 		if($email == $dbemail && $pass == $dbpassword) {
-			$_SESSION['sess_users']=$dbemail;
+			$_SESSION['sess_users'] = $dbemail;
 			echo "You are now logged in";
 			if (isset($_COOKIE['PHPSESSID']))
        			 session_id($_COOKIE['PHPSESSID']); 
@@ -46,6 +45,7 @@ if (isset($_POST["submit"])) {
 			ob_start();
 			header("location: welcome.php",true);
 			ob_flush();
+			end;
 			
 			// header('location: index.html'); Doesn't work at the moment.
 		} else {
@@ -55,7 +55,7 @@ if (isset($_POST["submit"])) {
 }
 
 ?>
-
+<!doctype html>
 <html>
 <head>
 <title>Login</title>
