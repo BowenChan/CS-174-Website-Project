@@ -1,11 +1,3 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-</head>
-
-<body>
 <?php
 	session_start();
 	ob_start();
@@ -30,6 +22,15 @@
 	}
 	header('Location:video.php');
 ?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
 <form action = "favoriteVideo.php">
 	<a href = 'video.php'><button type = "button" name = "go back"> Go Back </button></a>
 </form>
