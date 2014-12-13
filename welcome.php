@@ -19,7 +19,6 @@ if($_SESSION['sess_users'] === '')
 }
 
 print '<h1>Welcome to Group 3\'s Video Site!</h1>';
-//print '<p>Hello, ' . $_SESSION['email'] . '!</p>';
 ob_end_flush()
 ?>
 <p><a href="enterData.php">Add new video!</a></p>
