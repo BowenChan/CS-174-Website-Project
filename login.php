@@ -16,8 +16,7 @@ if (isset($_POST['email']) && isset($_POST['pass']))
 
 		setcookie ($cookie_email, $email, time() + 60, "/");
 		setcookie ($cookie_pass, $pass, time() + 60, "/");
-		}
-		//header('Location: welcome.php');
+		}	
 }
 
 
@@ -46,8 +45,7 @@ if (isset($_POST["submit"])) {
 			header("location: welcome.php",true);
 			ob_flush();
 			end;
-			
-			// header('location: index.html'); Doesn't work at the moment.
+
 		} else {
 			echo "Invalid Username or Password, Please Try Again";
 		}
