@@ -45,7 +45,6 @@ if (isset($_POST["submit"])) {
 			header("location: welcome.php",true);
 			ob_flush();
 			end;
-
 		}
 	} else {
 		echo "Your email or password is incorrect. Please try again";
