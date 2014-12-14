@@ -66,6 +66,9 @@ Password: <input type="password" name="pass"><br />
 <pre><input type="checkbox" name="store_login" value="user">Remember Me<br></pre>
 </form>
 
+<p><a href="editEmail.php">Change your email.</a></p>
+<p><a href="editPassword.php">Change your password</a></p>
+
 
 </body>
 </html>
