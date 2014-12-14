@@ -1,7 +1,7 @@
 <?php
 include("dbconnect.php");
 ?>
-<?php include('header.html');?>
+<?php include('header.php'); ?>
 <h2>Modify my Video Collection!!!</h2>
 Enter the link of the video you wish to modify
 <form method=post action="verify_input.php">

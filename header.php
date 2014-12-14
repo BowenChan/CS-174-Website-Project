@@ -10,6 +10,12 @@
 <nav width="100%" height="56" >
   <ul>
    	<li><a href = "welcome.php">Home</a></li>
+    <?php
+	if(isset($_SESSION['sess_users'])) {
+		echo "<li><a href = 'enterData.php'>Add A Video</a></li>";
+    	echo "<li><a href = 'modify.php'>Modify A Video</a></li>";
+	}
+	?>
     <li><a href = "#">Category</a>
     	<ul>		
                	<li><a href = "video.php?sort=lgnth"> Length </a>
@@ -58,12 +64,6 @@
                	</li>
          </ul>
     </li>
-    <?php
-	if(isset($_SESSION['sess_users'])) {
-		echo "<li><a href = 'enterData.php'>Add A Video</a></li>";
-    	echo "<li><a href = 'modify.php'>Modify A Video</a></li>";
-	}
-	?>
     <li><a href = "video.php">View All</a></li>
     <?php
 	if(!isset($_SESSION['sess_users'])){
@@ -72,6 +72,12 @@
 	}
 	?>
 	<li><a href = "displayFav.php"> Display Favorite </a></li>
+    <?php
+	if(isset($_SESSION['sess_users'])) {
+		echo "<li><a href = 'editAccount.php'> Edit Account </a></li>";
+	}
+	?>
+    
   </ul>
 </nav>
 </body>
