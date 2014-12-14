@@ -46,12 +46,11 @@ if (isset($_POST["submit"])) {
 			ob_flush();
 			end;
 
-		} else {
-			echo "<p>Invalid Username or Password, Please Try Again</p>";
 		}
+	} else {
+		echo "Your email or password is incorrect. Please try again";
 	}
 }
-
 ?>
 <!doctype html>
 <html>
