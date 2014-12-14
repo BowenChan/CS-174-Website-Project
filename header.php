@@ -58,11 +58,15 @@
                	</li>
          </ul>
     </li>
-    <li><a href = "video.php">View All</a></li>
-    <li><a href = "modify.php">Modify A Video</a></li>
     <?php
-	if(!isset($_SESSION['sess_users']))
-	{
+	if(isset($_SESSION['sess_users'])) {
+		echo "<li><a href = 'enterData.php'>Add A Video</a></li>";
+    	echo "<li><a href = 'modify.php'>Modify A Video</a></li>";
+	}
+	?>
+    <li><a href = "video.php">View All</a></li>
+    <?php
+	if(!isset($_SESSION['sess_users'])){
     	echo "<li><a href = 'login.php'>Login </a></li>";
     	echo "<li><a href = 'register.php'> Register </a></li>";
 	}

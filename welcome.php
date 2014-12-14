@@ -5,28 +5,19 @@
 <meta charset="UTF-8">
 <title>Welcome</title>
 </head>
-<?php include('header.php');?>
+<?php include('header.php'); ?>
 <body>
 <?php 
 
 ob_start();
-session_start();
-
-//define('TITLE', 'welcome');
-if($_SESSION['sess_users'] === '')
-{
-	echo "You are not logged in";
-}
 
 print '<h1>Welcome to Group 3\'s Video Site!</h1>';
+
 ob_end_flush()
 ?>
-<p><a href="enterData.php">Add new video!</a></p>
-
-<p><a href="video.php">Browse my video collection!</a></p>
 <div>
 <?php
-if(!($_SESSION['sess_users'] === ''))
+if(isset($_SESSION['sess_users']))
 {
 	echo "<p>Click <a href=logout.php>here</a> to logout.</p>";
 }
