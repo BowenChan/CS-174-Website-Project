@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<?php 	session_start();// session_start() Session already started during login. Don't need to do it again.?>
+<?php session_start(); ?>
 <nav width="100%" height="56" >
   <ul>
    	<li><a href = "welcome.php">Home</a></li>
