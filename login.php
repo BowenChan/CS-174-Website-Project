@@ -30,7 +30,7 @@ if (isset($_POST["submit"])) {
 	$numrows=mysqli_num_rows($query);
 
 	if($numrows!=0) {
-		while($row=mysqli_fetch_assoc($query)) { // When you found the row w/ the login info//
+		while($row=mysqli_fetch_assoc($query)) { // When you found the row w/ the login info
 			$dbemail = $row['email'];
 			$dbpassword = $row['password'];
 		}
@@ -47,7 +47,7 @@ if (isset($_POST["submit"])) {
 			end;
 
 		} else {
-			echo "Invalid Username or Password, Please Try Again";
+			echo "<p>Invalid Username or Password, Please Try Again</p>";
 		}
 	}
 }
