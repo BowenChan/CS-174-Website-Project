@@ -226,5 +226,6 @@
 		}
 		$j++;
 	}
+	$_SESSION['constr'] = $constr1;
 	}
 ?></pre>

@@ -6,7 +6,9 @@
 </head>
 
 <body style = "text-align:center">
+	
 <?php
+session_start();
 if ($num_pages > 1) {
 	
 	echo '<br /><p>';
@@ -14,13 +16,23 @@ if ($num_pages > 1) {
 	
 	// If it's not the first page, make a Previous button:
 	if ($current_page != 1) {
-		echo '<a href="video.php?s=' . ($start - $display) . '&p=' . $num_pages . '&sort=' . $sort . '&constr=' . $constr .'">Previous</a> ';
+		echo '<a href="video.php?s=' . ($start - $display) . '&p=' . $num_pages . '&sort=' . $sort . '">Previous</a> ';
 	}
 	
 	// Make all the numbered pages:
-	for ($i = 1; $i <= $num_pages; $i++) {
+	if($current_page < 10)
+	{
+		$pageS = 1;
+	}
+	else
+		$pageS = $current_page - 10;
+	if($current_page > $num_pages - 10)
+		$pageE = $num_pages;
+	else
+		$pageE = $current_page + 10;
+	for ($i = $pageS; $i <= $pageE; $i++) {
 		if ($i != $current_page) {
-			echo '<a href="video.php?s=' . (($display * ($i - 1))) . '&p=' . $num_pages . '&sort=' . $sort . '&constr=' . $constr .'">' . $i . '</a> ';
+			echo '<a href="video.php?s=' . (($display * ($i - 1))) . '&p=' . $num_pages . '&sort=' . $sort .'">' . $i . '</a> ';
 		} else {
 			echo $i . ' ';
 		}
@@ -28,7 +40,7 @@ if ($num_pages > 1) {
 	
 	// If it's not the last page, make a Next button:
 	if ($current_page != $num_pages) {
-		echo '<a href="video.php?s=' . ($start + $display) . '&p=' . $num_pages . '&sort=' . $sort . '&constr=' . $constr . '">Next</a>';
+		echo '<a href="video.php?s=' . ($start + $display) . '&p=' . $num_pages . '&sort=' . $sort .'">Next</a>';
 	}
 	
 	echo '</p>'; // Close the paragraph.

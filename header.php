@@ -1,3 +1,10 @@
+<script type = 'text/javascript'>
+	function changeSession(){
+		xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("GET","modifysession.php");
+		xmlhttp.send();
+	}
+</script>
 <!doctype html>
 <html><head>
 <meta charset="utf-8">
@@ -64,7 +71,7 @@
                	</li>
          </ul>
     </li>
-    <li><a href = "video.php">View All</a></li>
+    <li><a href = "video.php" onClick="changeSession()">View All</a></li>
     <?php
 	if(!isset($_SESSION['sess_users'])){
     	echo "<li><a href = 'login.php'>Login </a></li>";

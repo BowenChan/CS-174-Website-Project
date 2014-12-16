@@ -8,7 +8,7 @@
 <body>
 <?php
 	session_start();
-	$_SESSION['vidarr'] = "";
+	
 	include('header.php');
 	include('multiple_sort.php');
 	include('display.php');

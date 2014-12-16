@@ -18,10 +18,7 @@
 	/*
 	$res = mysqli_query($link, "SELECT * FROM `fun_video` ORDER BY id ASC")
 	or die("This is failing");
-	*/
-	$organize = "";
-	$video_data = array();
-			
+	*/			
 	//number of display per page
 	$display = 10;
 	$num_rec = null;
@@ -32,8 +29,8 @@
 	}
 	//detemine the pages
 
-	else($num_rec != mysqli_fetch_array(mysqli_query($link,"SELECT COUNT(*) FROM `". $table ."` $constr1"),MYSQLI_NUM));
-		$q = mysqli_query($link,"SELECT COUNT(*) FROM `".$table ."` $constr1");
+	else($num_rec != mysqli_fetch_array(mysqli_query($link,"SELECT COUNT(*) FROM `". $table ."` ". $_SESSION['constr']),MYSQLI_NUM));
+		$q = mysqli_query($link,"SELECT COUNT(*) FROM `".$table ."` ". $_SESSION['constr']);
 		$row = mysqli_fetch_array($q,MYSQLI_NUM);
 		$num_rec = $row[0];
 	if($num_rec == 0)
@@ -55,7 +52,7 @@
 	{
 		$start = 0;
 	}
-	$q =  mysqli_query($link,"SELECT * FROM `" . $table . "` $constr1 ORDER by $order LIMIT $start, $display");
+	$q =  mysqli_query($link,"SELECT * FROM `" . $table . "` ". $_SESSION['constr'] . " ORDER by $order LIMIT $start, $display");
 	}
 ?>
 <table style="width:100%">
