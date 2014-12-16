@@ -42,7 +42,8 @@ $newEmail = (isset($_POST['newEmail']) ? $_POST['newEmail'] : null);
 		}
 		
 		$sql = "UPDATE users SET email='".$newEmail."' WHERE email='".$curEmail."'";
-		$sql2 = "UPDATE `fav_video` SET user_id='".$newEmail."' WHERE user_id='".$curEmail."'";
+		$sql2 = "UPDATE fav_video SET user_id='".$newEmail."' WHERE user_id='".$curEmail."'";
+		mysqli_query($dbc,$sql);
 		if(mysqli_query($dbc, $sql)) {
 			echo "Email updated sucessfully";
 		}
