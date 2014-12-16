@@ -11,6 +11,7 @@
     <!-- Main CSS -->
     <link href="css/main.css" rel="stylesheet">
 	<!-- Fonts -->
+    
 	<link href="http://fonts.googleapis.com/css?family=Ubuntu:bold" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
 
