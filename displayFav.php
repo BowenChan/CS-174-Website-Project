@@ -3,6 +3,19 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+<!-- This script was used and is the property of http://lab.abhinayrathore.com/jquery_youtube 12/16/2014-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link type="text/css"
+		href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="jquery.youtubepopup.min.js"></script>
+    <script type="text/javascript">
+		$(function() {
+			$("a.youtube").YouTubePopup({ autoplay: 1 });
+		});
+		
+    </script>
+</head>
 </head>
 <link rel = "stylesheet" href = "table.css">
 <body>
