@@ -121,29 +121,29 @@
               <p>Video Type</p>
               <ul>
                 <li>
-                  <input type = "checkbox" name = "vidt[]" value = "Tutorial">
+                  <input type = "checkbox" name = "vidt[]" value = "tut">
                   Tutorial</li>
                 <li>
-                  <input type = "checkbox" name = "vidt[]" value = "Entertainment">
+                  <input type = "checkbox" name = "vidt[]" value = "ent">
                   Entertainment</li>
                 <li>
-                  <input type = "checkbox" name = "vidt[]" value = "Application">
+                  <input type = "checkbox" name = "vidt[]" value = "app">
                 Application</li>
-                <li><input type = "checkbox" name = "vidt[]" value = "Weapon">
+                <li><input type = "checkbox" name = "vidt[]" value = "wep">
                 Weapon
                 </li>
                 <li>
-                  <input type = "checkbox" name = "vidt[]" value = "Group demo	">
+                  <input type = "checkbox" name = "vidt[]" value = "gro">
                   Group Demo</li>
                 <li>
-                  <input type = "checkbox" name = "vidt[]" value = "Others">
+                  <input type = "checkbox" name = "vidt[]" value = "oth">
                   Others</li>
               </ul>
           </li>
       </ul>
   </nav>
   <p>
-    <input type = "submit" value = "filter">
+    <input type = "submit" value = "filter" style = "text-align:center">
   </p>
 </form>
 <body>

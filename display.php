@@ -35,6 +35,7 @@
 	$display = 10;
 	$num_rec = null;
 	$num_pages = 0;
+	
 	if(isset($_GET[$num_rec]))
 	{
 		$num_rec = 0;
