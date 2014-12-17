@@ -29,7 +29,7 @@
 	include('selectdbfav.php');
 	
 	//number of display per page
-	$display = 10;
+	$display = 5;
 	$num_rec = null;
 	$num_pages = 0;
 	if(isset($_GET[$num_rec]))
@@ -87,7 +87,7 @@
 	else
 	{
 		echo '</table>';
-		echo "<h1 style=text-align:center>" . "There is no video matching this category" . "</h1>";
+		echo "<h1 style=text-align:center>" . "You have no favorite videos" . "</h1>";
 	}
 	
 ?>
