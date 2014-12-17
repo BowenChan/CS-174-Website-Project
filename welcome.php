@@ -17,7 +17,7 @@
 
 ob_start();
 
-print '<h3>Explore our library of Taekwondo Videos </h3>';
+print '<h3>Explore our library of Martial Arts Videos </h3>';
 
 ob_end_flush()
 ?>
