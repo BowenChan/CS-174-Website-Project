@@ -15,9 +15,9 @@ var currentVideo = 0;
 // Playlist of videos.
 var videoPlaylist = [
 			'_xnsT6ukqM8',
-			'3FbD5GRf6gw',
             'ZHvvEKpkLw4', 
-			'xlHGjYHyjmM'];
+			'xlHGjYHyjmM',
+			'EO8eP6BTyrs'];
 
             
 function init() {
