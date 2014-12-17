@@ -20,6 +20,11 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="jquery.youtubepopup.min.js"></script>
     <script type="text/javascript">
+		$(function () {
+			$.fn.YouTubePopup.defaults.width = 1080;
+			$.fn.YouTubePopup.defaults.height = 750;
+			
+		});
 		$(function() {
 			$("a.youtube").YouTubePopup({ autoplay: 1 });
 		});
@@ -74,7 +79,7 @@
             </div>
             
             <div class="col-md-4">
-            	<a class="youtube" href="https://www.youtube.com/watch?v=xfcCfekFGwQ"><img src="http://i.ytimg.com/vi/xfcCfekFGwQ/mqdefault.jpg" class="img-responsive" alt=""></a>
+            	<a class="youtube" href="https://www.youtube.com/watch?v=KZA1-qC_qyE"><img src="http://i.ytimg.com/vi/KZA1-qC_qyE/mqdefault.jpg" class="img-responsive" alt=""></a>
             </div>            
             
     </div><!--row 1-->
