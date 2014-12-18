@@ -70,19 +70,19 @@
 			
 		//Length
 		case '10':
-			$constr1 = "WHERE `videolength` > 0 AND `videolength` <= 10";
+			$constr1 = "WHERE `videolength` > '0' AND `videolength` <= '10'";
 			break; 
 		case '20':
-			$constr1 = "WHERE `videolength` => 10 AND `videolength` <= 20";
+			$constr1 = "WHERE `videolength` => '10' AND `videolength` <= '20'";
 			break; 
 		case '40':
-			$constr1 = "WHERE `videolength` => 20 AND `videolength` <= 40";
+			$constr1 = "WHERE `videolength` => '20' AND `videolength` <= '40'";
 			break; 
 		case '60':
-			$constr1 = "WHERE `videolength` => 40 AND `videolength` <= 60";
+			$constr1 = "WHERE `videolength` => '40' AND `videolength` <= '60'";
 			break; 
 		case '61':
-			$constr1 = "WHERE `videolength` => 60";
+			$constr1 = "WHERE `videolength` => '60'";
 			break; 
 			
 		//View Count
@@ -121,11 +121,18 @@
 		case 'oth':
 			$constr1 = "WHERE `videotype` LIKE '%Others%'";
 			break;
-		default:
+		
+		//category
+		case  'ytc':
+			$constr1 = "WHERE `category` LIKE '%Yang Taichi%'";
+			break;
+			
+				default:
 			$constr1 = "";
 			break;
-		
 		}
+		$_SESSION['con'] = $constr;
+		$_SESSION['constr'] = $constr1;
 	}
 	else
 	{
@@ -172,13 +179,13 @@
 			$constr1 .= "`videolength` >= '10' AND `videolength` <= '20'";
 			break; 
 		case '40':
-			$constr1 .= "`videolength` >= 20 AND `videolength` <= 40";
+			$constr1 .= "`videolength` >= '20' AND `videolength` <= '40'";
 			break; 
 		case '60':
-			$constr1 .= "`videolength` >= 40 AND `videolength` <= 60";
+			$constr1 .= "`videolength` >= '40' AND `videolength` <= '60'";
 			break; 
 		case '61':
-			$constr1 .= "`videolength` >= 60";
+			$constr1 .= "`videolength` >= '60'";
 			break; 
 			
 		//View Count

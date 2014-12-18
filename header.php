@@ -8,7 +8,7 @@
 <!doctype html>
 <html><head>
 <meta charset="utf-8">
-<link rel = "stylesheet" href = "headerstyle.css">
+<link rel = "stylesheet" href = "css/headerstyle.css">
 <title>Untitled Document</title>
 </head>
 
@@ -69,8 +69,25 @@
                         <li><a href = "video.php?sort=vtype&constr=oth"> Others </a></li>
                  	</ul>
                	</li>
+                <li><a href = "video.php?sort=vcat"> Video Category </a>
+                	<ul style = "width: 200px">
+                    	<li><a href = "video.php?sort=vcat&constr=ytc"> Yang Taichi </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=ctc"> Chen Taichi </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=stc"> Sun Taichi </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=wtc"> Wu Taichi </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=qg"> QiGong </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=shl"> Shaolin </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=tkd"> Tae Kwon Do </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=wc"> Wing Chun </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=aki"> Aikido </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=jd"> Judo </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=kfm"> KungFu Movie </a></li>
+                 	</ul>
+               	</li>
+                
          </ul>
     </li>
+    
     <li><a href = "video.php" onClick="changeSession()">View All</a></li>
     <?php
 	if(!isset($_SESSION['sess_users'])){
