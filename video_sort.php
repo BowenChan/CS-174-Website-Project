@@ -70,19 +70,19 @@
 			
 		//Length
 		case '10':
-			$constr1 = "WHERE `videolength` > 0 AND `videolength` <= 10";
+			$constr1 = "WHERE `videolength` > '0' AND `videolength` <= '10'";
 			break; 
 		case '20':
-			$constr1 = "WHERE `videolength` => 10 AND `videolength` <= 20";
+			$constr1 = "WHERE `videolength` >= '10' AND `videolength` <= '20'";
 			break; 
 		case '40':
-			$constr1 = "WHERE `videolength` => 20 AND `videolength` <= 40";
+			$constr1 = "WHERE `videolength` >= '20' AND `videolength` <= '40'";
 			break; 
 		case '60':
-			$constr1 = "WHERE `videolength` => 40 AND `videolength` <= 60";
+			$constr1 = "WHERE `videolength` >= '40' AND `videolength` <= '60'";
 			break; 
 		case '61':
-			$constr1 = "WHERE `videolength` => 60";
+			$constr1 = "WHERE `videolength` >= '60'";
 			break; 
 			
 		//View Count
@@ -121,11 +121,49 @@
 		case 'oth':
 			$constr1 = "WHERE `videotype` LIKE '%Others%'";
 			break;
-		default:
+		
+		//category
+		case  'ytc':
+			$constr1 = "WHERE `category` LIKE '%Yang Taichi%'";
+			break;
+			case  'ctc':
+			$constr1 = "WHERE `category` LIKE '%Chen Taichi%'";
+			break;
+			case  'stc':
+			$constr1 = "WHERE `category` LIKE '%Sun Taichi%'";
+			break;
+			case  'wtc':
+			$constr1 = "WHERE `category` LIKE '%Wu Taichi%'";
+			break;
+			case  'qg':
+			$constr1 = "WHERE `category` LIKE '%QiGong%'";
+			break;
+			case  'shl':
+			$constr1 = "WHERE `category` LIKE '%Shaolin%'";
+			break;
+			case  'tkd':
+			$constr1 = "WHERE `category` LIKE '%Tae Kwon Do%'";
+			break;
+			case  'wc':
+			$constr1 = "WHERE `category` LIKE '%Wing Chun%'";
+			break;
+			case  'aki':
+			$constr1 = "WHERE `category` LIKE '%Aikido%'";
+			break;
+			case  'jd':
+			$constr1 = "WHERE `category` LIKE '%Judo%'";
+			break;
+			case  'kfm':
+			$constr1 = "WHERE `category` LIKE '%KungFu Movie%'";
+			break;
+			
+			
+				default:
 			$constr1 = "";
 			break;
-		
 		}
+		$_SESSION['con'] = $constr;
+		$_SESSION['constr'] = $constr1;
 	}
 	else
 	{
@@ -172,13 +210,13 @@
 			$constr1 .= "`videolength` >= '10' AND `videolength` <= '20'";
 			break; 
 		case '40':
-			$constr1 .= "`videolength` >= 20 AND `videolength` <= 40";
+			$constr1 .= "`videolength` >= '20' AND `videolength` <= '40'";
 			break; 
 		case '60':
-			$constr1 .= "`videolength` >= 40 AND `videolength` <= 60";
+			$constr1 .= "`videolength` >= '40' AND `videolength` <= '60'";
 			break; 
 		case '61':
-			$constr1 .= "`videolength` >= 60";
+			$constr1 .= "`videolength` >= '60'";
 			break; 
 			
 		//View Count
