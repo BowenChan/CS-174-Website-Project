@@ -2,20 +2,53 @@
 <html>
 <head>
 <title>Register</title>
+<!-- Latest compiled and minified CSS --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+    <style>
+	.main{
+		margin-top: 100px;
+	}
+	.content {
+		margin-top: 40px;
+	}
+</style>
 </head>
 <body>
 
+<div class="container text-center main">
 <p><a href="register.php">Register</a> | <a href="login.php">Login</a></p>
 
-<h3>Registration Form</h3>
-<form action="" method="POST">
+<h1>Registration Form</h1>
+<form action="" method="POST" class="form-horizontal content" role="form">
 
-Email: <input type="text" name="email"><br />
-Password: <input type="password" name="pass"><br />
-Please use a password with at least 1 number and 1 character. Must also be 8 or more characters but 25 or less.
-<p><input type="submit" value="Register" name="submit" /></p>
-
+	<div class="form-group">
+		<label for="inputEmail" class="col-md-4 control-label">Email</label> 
+        <div class="col-md-4">
+			<input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
+        </div>
+    </div>
+    
+    <div class="form-group">
+		<label for="inputPsw" class="col-md-4 control-label">Password</label> 
+        <div class="col-md-4">
+			<input type="password" class="form-control" id="inputPsw" name="pass" placeholder="Password">
+        </div>
+    </div>
+    <div class="col-md-offset-4 col-md-4">
+    	<p align="left" style="color:red">Please use a password with 8-25 characters and at least 1 number and 1 letter</p>
+    	
+    </div>
+  
+  	<div class="form-group">
+    <div class="col-md-offset-4 col-md-4">
+    <input type="submit" class="btn btn-primary" value="Register" name="submit">
+    </div>
+  </div>
+  
+<!--<input type="submit" value="Login" name="submit"><br />
+<pre><input type="checkbox" name="store_login" value="user">Remember Me<br></pre>-->
 </form>
+
 
 <?php
 ob_start();
