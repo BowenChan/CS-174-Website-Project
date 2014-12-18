@@ -51,8 +51,8 @@ include ("dbconnect.php");
 <input type=text id=image name=image size= 30 />
 <p><label for=tag><strong>tag</strong></label>
 <input type=text id=tag name=tag size= 30 />(keywords separated by commas)</p>
-<label for=resolution><strong>Category</strong></label>
-	<select id=resolution name=resolution>
+<label for=category><strong>Category</strong></label>
+	<select id=category name=category>
     	<option value=Yang Taichi>Yang Taichi</option>
         <option value=Chen Taichi>Chen Taichi</option>
         <option value=Sun Taichi>Sun Taichi</option>
