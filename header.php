@@ -22,6 +22,7 @@
 		echo "<li><a href = 'enterData.php'>Add A Video</a></li>";
     	echo "<li><a href = 'modify.php'>Modify A Video</a></li>";
 	}
+	
 	?>
     <li><a href = "#"  onClick="changeSession()">Category</a>
     	<ul>		
