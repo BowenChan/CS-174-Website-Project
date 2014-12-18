@@ -35,7 +35,7 @@
         </div>
     </div>
     <div class="col-md-offset-4 col-md-4">
-    	<p align="left" style="color:red">Please use a password with 8-25 characters and at least 1 number and 1 letter</p>
+    	<p align="left" style="color:red">Password must be 8 characters or longer with at least 1 number and 1 letter</p>
     	
     </div>
   
@@ -59,7 +59,7 @@ $pass = (isset($_POST['pass']) ? $_POST['pass'] : null);
 
 function passwordStr($password) // Function to check pw strength
 {
-	if (!(strlen($password) < 8) && preg_match('/[a-z]+[0-9]+/', $password)) {
+	if (!(strlen($password) < 8) && preg_match("/[0-9]+/",$password1) && preg_match("/[a-zA-Z]+/", $password)) {
 		return TRUE;
 	}
 	else return FALSE;
