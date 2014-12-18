@@ -47,7 +47,7 @@ else{
 $result = mysqli_query($conn, $sql);
 if ($result)
 {
-while (list($id, $title, $link, $length, $resolution, $desc, $language, $count, $type, $image, $tag) = mysqli_fetch_array($result))
+while (list($id, $title, $link, $length, $resolution, $desc, $language, $count, $type, $image, $tag, $category) = mysqli_fetch_array($result))
 {
 	print "<tbody><tr>
 	<td><a href=$link target=_blank><img src=$image width=\"250px\" /></a></td>

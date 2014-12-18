@@ -1,7 +1,7 @@
 <?php
 
 include("dbconnect.php"); 
-include('header.html');
+include('header.php');
 ?>
 
 <h2>You wish to modify the information on
@@ -18,7 +18,7 @@ $result = mysqli_query($conn, "select * from fun_video where videolink ='$to_be_
 
 if ($result)
 {
-list($id1, $title1, $link1, $length1, $resolution1, $desc1, $language1, $count1, $type1, $image1, $tag1) = mysqli_fetch_array($result);
+list($id1, $title1, $link1, $length1, $resolution1, $desc1, $language1, $count1, $type1, $image1, $tag1, $category1) = mysqli_fetch_array($result);
      if ($title1 !=null)
      {
 print  "Video is: <p><img src=$image1 alt=link /></p>";
