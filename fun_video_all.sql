@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 18, 2014 at 01:01 AM
+-- Generation Time: Dec 18, 2014 at 02:57 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `fun_video_all` (
   `iconimage` text COLLATE utf8_unicode_ci NOT NULL,
   `tag` text COLLATE utf8_unicode_ci NOT NULL,
   `category` enum('Yang Taichi','Chen Taichi','Sun Taichi','Wu Taichi','QiGong','Shaolin','Tae kwon do','Wing Chun','Aikido','Judo','KungFu Movie') COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2048 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1045 ;
 
 --
 -- Dumping data for table `fun_video_all`
@@ -1091,7 +1091,13 @@ INSERT INTO `fun_video_all` (`id`, `title`, `videolink`, `videolength`, `highest
 (1035, 'Shaolin Kung Fu Training', 'http://www.youtube.com/watch?v=Z4-s8TBB6dw', 5, '240', 'This is a video about training shaolin monks.', 'English', 945961, 'Tutorial,Group demo', 'http://img.youtube.com/vi/Z4-s8TBB6dw/1.jpg', 'Shaolin, kungfu, Training, Monks', 'Shaolin'),
 (1036, 'South Shaolin Vs. North Shaolin', 'http://www.youtube.com/watch?v=ZDMKRH5Nmx4', 86, '144', 'South Shaolin Vs. North Shaolin (1984)', 'English', 149101, 'Entertainment', 'http://img.youtube.com/vi/ZDMKRH5Nmx4/1.jpg', 'Shaolin, movie, South Shaolin, North Shaolin, 1984', 'Shaolin'),
 (1037, 'Yin Shou Gun (Shaolin Stick Fighting)', 'http://www.youtube.com/watch?v=ZHvvEKpkLw4', 6, '720', 'This is a short documentary about the history of shaolin stick fighting and in-particular the Yin Sh', 'English', 263625, 'Weapon', 'http://i.ytimg.com/vi_webp/ZHvvEKpkLw4/mqdefault.webp', 'Weapon, Entertainment', 'Shaolin'),
-(1038, 'Shaolin monk KO world Taekwondo champion Monje Sha', 'http://www.youtube.com/watch?v=ZPAn2AIZFj8', 8, '360', 'Shaolin monk KO world Taekwondo champion Monje Shaolin vs Campeón taekwondo', 'Non-English', 1361504, '', 'http://i.ytimg.com/vi/ZPAn2AIZFj8/mqdefault.jpg', 'Entertainment', 'Shaolin');
+(1038, 'Shaolin monk KO world Taekwondo champion Monje Sha', 'http://www.youtube.com/watch?v=ZPAn2AIZFj8', 8, '360', 'Shaolin monk KO world Taekwondo champion Monje Shaolin vs Campeón taekwondo', 'Non-English', 1361504, '', 'http://i.ytimg.com/vi/ZPAn2AIZFj8/mqdefault.jpg', 'Entertainment', 'Shaolin'),
+(1039, 'La Furia de Jackie', 'https://www.youtube.com/watch?v=2gRI4xRlRjU', 82, '', 'Esta es una de las primeras películas de Jackie Chan. Durante años estuvo sin estrenar. Hasta que a finales de los ''70, la productora propietaria del film la estrenó completando la película con un doble de Jackie Chan y con escenas de ''El Mono Borracho en el Ojo del Tigre''.', 'Non-English', 1181474, 'Entertainment', 'https://i.ytimg.com/vi/2gRI4xRlRjU/mqdefault.jpg', 'Jackie Chan, KungFu, Movie', 'KungFu Movie'),
+(1040, 'Der Tiger Hetzt Sie Alle (Bruce Le)', 'https://www.youtube.com/watch?v=Z6HDGbji4qQ', 86, '720', 'AKA Bruce The Super Hero. ', 'Non-English', 160570, 'Entertainment', 'https://i.ytimg.com/vi/Z6HDGbji4qQ/mqdefault.jpg', 'Bruce Le, KungFu, Movie', 'KungFu Movie'),
+(1041, 'Shanghai Knights Full Movie', 'https://www.youtube.com/watch?v=5byxHiCyFbs&list=PL637C3790A6FFEDE0&index=11', 114, '720', 'Shanghai Knights Full Movie', 'English', 115890, 'Entertainment', 'https://i.ytimg.com/vi/5byxHiCyFbs/default.jpg', 'Jackie Chan, KungFu, Movie', 'KungFu Movie'),
+(1042, 'El Dragón y el Joven Maestro (Dragon Lee)', 'https://www.youtube.com/watch?v=7EcY26PNsWo', 84, '720', 'OT, The Dragon, the Young Master.\r\nStarring, Dragon Lee, Phoenix Kim.', 'Non-English', 282460, '', 'https://i.ytimg.com/vi/7EcY26PNsWo/default.jpg', 'Dragon Lee, KungFu, Movie', 'KungFu Movie'),
+(1043, 'Sale el Dragón, Entra el Tigre', 'https://www.youtube.com/watch?v=26ibnd4MIb4', 79, '720', 'Original Title: Exit the Dragon, Enter the Tiger.\r\n\r\nCantonese Version:\r\nhttp://youtu.be/5Hzvw_V0fqw\r\nStarring, Bruce Li. ', 'Non-English', 102722, 'Entertainment', 'https://i.ytimg.com/vi/26ibnd4MIb4/mqdefault.jpg', 'Bruce Le, KungFu, Movie', 'KungFu Movie'),
+(1044, 'Reign of Fire [2002] (Full Movie HD 1080p)', 'https://www.youtube.com/watch?v=lhfRDyEyr3k', 102, '1080', 't is twenty years in the future, and the planet has been devastated by vicious fire-breathing dragons. The last vestiges of humanity now struggle for survival at remote outposts. In a ruined castle in the English countryside, Quinn is desperately trying to hold together a band of frightened, restless survivors.', 'English', 898412, 'Entertainment', 'https://i.ytimg.com/vi/lhfRDyEyr3k/mqdefault.jpg', 'KungFu, Movie', 'KungFu Movie');
 
 --
 -- Indexes for dumped tables
@@ -1111,7 +1117,7 @@ ALTER TABLE `fun_video_all`
 -- AUTO_INCREMENT for table `fun_video_all`
 --
 ALTER TABLE `fun_video_all`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2048;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1045;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
