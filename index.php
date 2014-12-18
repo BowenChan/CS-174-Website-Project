@@ -5,14 +5,19 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+  <!--  <link href="css/bootstrap.min.css" rel="stylesheet">-->
     <link href="custom.css" rel="stylesheet">    
     <!--Youtube--->
     <script src="jquery.js"></script>
-      
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified JavaScript --> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+ <!--   <script src="js/bootstrap.min.js"></script>-->
+    
     <!-- This script was used and is the property of http://lab.abhinayrathore.com/jquery_youtube 12/16/2014-->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link type="text/css"
