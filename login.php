@@ -67,7 +67,7 @@ Password: <input type="password" name="pass"><br />
 </form>
 
 <p><a href="editEmail.php">Change your email.</a></p>
-<p><a href="editPassword.php">Change your password</a></p>
+<p><a href="editPassword.php">Change your password.</a></p>
 
 
 </body>
