@@ -5,24 +5,39 @@
 		xmlhttp.send();
 	}
 </script>
+
 <!doctype html>
 <html><head>
 <meta charset="utf-8">
 <link rel = "stylesheet" href = "css/headerstyle.css">
-<title>Untitled Document</title>
+<title>Header</title>
 </head>
 
 <body>
 <?php session_start(); ?>
+
 <nav width="100%" height="56" >
   <ul>
    	<li><a href = "welcome.php">Home</a></li>
     <?php
+	
+	// FUNCTION TO CHECK ADMIN
+	function adminChecker() {
+	$adminEmail = $_COOKIE['User'];
+	
+	if($adminEmail == 'admin@group3.cs174') {
+		return true;
+	}
+	else return false;	
+	}
+	// FUNCTION TO CHECK ADMIN
+	
 	if(isset($_SESSION['sess_users'])) {
 		echo "<li><a href = 'enterData.php'>Add A Video</a></li>";
-    	echo "<li><a href = 'modify.php'>Modify A Video</a></li>";
+		if(adminChecker()) { // IF ADMIN - ECHO THE LINK TO MODIFY , ELSE ECHO NEED ADMIN PAGE.
+			echo "<li><a href = 'modify.php'>Modify A Video</a></li>";
+		} else echo "<li><a href = 'needadmin.html'>Modify A Video</a></li>";
 	}
-	
 	?>
     <li><a href = "#"  onClick="changeSession()">Category</a>
     	<ul>		

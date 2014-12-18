@@ -6,7 +6,7 @@ ob_start();
 
 if (isset($_POST['email']) && isset($_POST['pass']))
 {
-	if (isset($_POST['store_login'])) // If user opts in, store user info to a cookie for 1 minute
+	if (isset($_POST['store_login'])) // If user opts in, store user info to a cookie for 60 minutes
 		{
 			echo "enter";
 			$cookie_email= "User";
@@ -14,11 +14,10 @@ if (isset($_POST['email']) && isset($_POST['pass']))
 			$email=$_POST['email'];
 			$pass=$_POST['pass'];
 
-		setcookie ($cookie_email, $email, time() + 60, "/");
-		setcookie ($cookie_pass, $pass, time() + 60, "/");
+		setcookie ($cookie_email, $email, time() + 3600, "/");
+		setcookie ($cookie_pass, $pass, time() + 3600, "/");
 		}	
 }
-
 
 if (isset($_POST["submit"])) {
 	$email = $_POST['email'];
