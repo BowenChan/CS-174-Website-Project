@@ -22,13 +22,19 @@ list($id1, $title1, $link1, $length1, $resolution1, $desc1, $language1, $count1,
      if ($title1 !=null)
      {
 print  "Video is: <p><img src=$image1 alt=link /></p>";
-$title1= mysql_real_escape_string(trim(strip_tags($title1)),$dbc);
-$link1= mysql_real_escape_string(trim(strip_tags($link1)),$dbc);
+
+// THIS IS FOR CLEANSING INPUT - But it needs fixing...
+
+//$title1= mysql_real_escape_string(trim(strip_tags($title1)),$dbc);
+//$link1= mysql_real_escape_string(trim(strip_tags($link1)),$dbc);
 //$desc1= mysql_real_escape_string(trim(strip_tags($desc1)),$dbc);
 //print "$desc1";
-$language1 = mysql_real_escape_string(trim(strip_tags($language1)),$dbc);
-$image1 =mysql_real_escape_string(trim(strip_tags($image1)),$dbc);
-$tag1 = mysql_real_escape_string(trim(strip_tags($tag1)),$dbc); 
+//$language1 = mysql_real_escape_string(trim(strip_tags($language1)),$dbc);
+//$image1 =mysql_real_escape_string(trim(strip_tags($image1)),$dbc);
+//$tag1 = mysql_real_escape_string(trim(strip_tags($tag1)),$dbc); 
+
+//
+
 print "
 <form method=post action='updateinfo.php'>
 <p><label for=title><strong>Video Title</strong></label> <input type=text name=title id=title size=40 value='$title1' />
