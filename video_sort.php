@@ -163,7 +163,6 @@
 			break;
 		}
 		$_SESSION['con'] = $constr;
-		$_SESSION['constr'] = $constr1;
 	}
 	else
 	{
@@ -172,6 +171,7 @@
 		$j = 0;
 	while(count($vidarr) > $j)
 	{
+		$_SESSION['con'] .= $vidarr[$j]. "+";
 	switch($vidarr[$j])
 	{
 		//resolution
@@ -262,8 +262,10 @@
 		{
 			$constr1 .= " AND ";
 		}
+		 
 		$j++;
 	}
 	$_SESSION['constr'] = $constr1;
+	
 	}
 ?></pre>
