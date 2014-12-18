@@ -2,22 +2,22 @@
 <?php include("dbconnect.php");
 include('header.php'); 
 //recover the form variable values.
-if(!empty($link) || !empty($title) || !empty($image)){
-$title= mysql_real_escape_string(trim(strip_tags($_POST['title'])),$dbc);
-$link= mysql_real_escape_string(trim(strip_tags($_POST['link'])),$dbc);
+if(!empty($_POST['title']) || !empty($title) || !empty($image)){
+$title= mysqli_real_escape_string($dbc, trim(strip_tags($_POST['title'])));
+$link= mysqli_real_escape_string($dbc, trim(strip_tags($_POST['link'])));
 $length= $_POST['length'];
-$resolution= mysql_real_escape_string(trim(strip_tags($_POST['resolution'])),$dbc);
-$desc= mysql_real_escape_string(trim(strip_tags($_POST['desc'])),$dbc);
-$language = mysql_real_escape_string(trim(strip_tags($_POST['language'])),$dbc);
+$resolution= mysqli_real_escape_string($dbc, trim(strip_tags($_POST['resolution'])));
+$desc= mysqli_real_escape_string($dbc, trim(strip_tags($_POST['desc'])));
+$language = mysqli_real_escape_string($dbc,trim(strip_tags($_POST['language'])));
 $count= $_POST['count'];
 $type = "";
 if(!empty($_POST['type']))
 	$type= implode(',', $_POST['type']);
-$image =mysql_real_escape_string(trim(strip_tags($_POST['image'])),$dbc);
-$tag = mysql_real_escape_string(trim(strip_tags($_POST['tag'])),$dbc); 
-$cat = mysqli_real_escape_string($link,trim(strip_tags($_POST['category'])));
+$image =mysqli_real_escape_string($dbc, trim(strip_tags($_POST['image'])));
+$tag = mysqli_real_escape_string($dbc, trim(strip_tags($_POST['tag']))); 
+$cat = mysqli_real_escape_string($dbc,trim(strip_tags($_POST['category'])));
 $query = "insert into fun_video "
-        ." (title,videolink,videolength,highestresolution,description,language,viewcount,videotype,iconimage,tag) values "
+        ." (title,videolink,videolength,highestresolution,description,language,viewcount,videotype,iconimage,tag, category) values "
                 ."('$title', '$link', '$length', '$resolution', '$desc','$language','$count','$type','$image','$tag', '$cat')"
         ;
 
