@@ -1,7 +1,7 @@
 CS-174-Website-Project
 ======================
 
-Martial Arts Archive Website<br>
+Martial Arts Video Archive Website<br>
 CS 174 Server Side Programming<br>
 Final Project<br>
 Languages: PHP, CSS/HTML, Javascript<br><br>
