@@ -54,15 +54,56 @@ if (isset($_POST["submit"])) {
 <html>
 <head>
 <title>Login</title>
+<!-- Latest compiled and minified CSS --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+    <style>
+	.main{
+		margin-top: 100px;
+	}
+	.content {
+		margin-top: 40px;
+	}
+</style>
 </head>
 <body>
 
-<h3>Login Form</h3>
-<form action="login.php" method ="POST">
-Email: <input type="text" name="email"><br />
-Password: <input type="password" name="pass"><br />
-<input type="submit" value="Login" name="submit"><br />
-<pre><input type="checkbox" name="store_login" value="user">Remember Me<br></pre>
+<div class="container text-center main">
+<h1>Login Form</h1>
+
+<form action="login.php" method ="POST" class="form-horizontal content" role="form">
+	<div class="form-group">
+		<label for="inputEmail" class="col-md-4 control-label">Email</label> 
+        <div class="col-md-4">
+			<input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
+        </div>
+    </div>
+    
+    <div class="form-group">
+		<label for="inputPsw" class="col-md-4 control-label">Password</label> 
+        <div class="col-md-4">
+			<input type="password" class="form-control" id="inputPsw" name="pass" placeholder="Password">
+        </div>
+    </div>
+        
+    <div class="form-group">
+    <div class="col-md-offset-4 col-md-4">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="store_login" value="user"> Remember me
+        </label>
+      </div>
+    </div>
+  	</div>
+  
+  	<div class="form-group">
+    <div class="col-md-offset-4 col-md-4">
+    <input type="submit" class="btn btn-primary" value="Login" name="submit">
+   <!--   <button type="submit" class="btn btn-default">Login</button>-->
+    </div>
+  </div>
+  
+<!--<input type="submit" value="Login" name="submit"><br />
+<pre><input type="checkbox" name="store_login" value="user">Remember Me<br></pre>-->
 </form>
 
 <p><a href="editEmail.php">Change your email.</a></p>
