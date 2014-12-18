@@ -1,9 +1,9 @@
 CS-174-Website-Project
 ======================
 
-Martial Arts Archive Website
-CS 174 Server Side Programming
-Final Project
-Languages: PHP, CSS/HTML, Javascript
+Martial Arts Archive Website<br>
+CS 174 Server Side Programming<br>
+Final Project<br>
+Languages: PHP, CSS/HTML, Javascript<br><br>
 
 Work Comprised of Benton Li, Bowen Chan, Chunxia Zhao, and  Kory Le
