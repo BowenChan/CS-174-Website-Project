@@ -104,7 +104,7 @@
 		"<td>" . $row['language'] . "</td>" .
 		"<td><a class = 'youtube' href = " . $row['videolink'] . "><img src =" . $row['iconimage'] . " alt=picture></a></td>" .
 		"<td>" . $row['tag'] . "</td>" .
-		"<td><form><a href='favoriteVideo.php?id=". $row['id']. "'><button type = 'button' name = 'vidID' value = '". $row['id'] . "'> Favorite </button></a></form></td>" . 	
+		"<td><form><a href='favoriteVideo.php?id=". $row['id']. "'><button type = 'button' name = 'vidID' value = '". $row['id'] . "'> Favorite </button></a></form></td>" .
 		"<td>" . $row['category'] . "</td>" .
 		"</tr>";
 	}
