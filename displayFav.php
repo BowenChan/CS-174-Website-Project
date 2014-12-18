@@ -95,7 +95,7 @@
 		"<td>" . $row['language'] . "</td>" .
 		"<td><a class = 'youtube' href = " . $row['videolink'] . "><img src =" . $row['iconimage'] . " alt=picture></a></td>" .
 		"<td>" . $row['tag'] . "</td>" .
-		"<td><form><a href='unfavoriteVideo.php?id=". $row['id']. "'><button type = 'button' name = 'vidID' value = '". $row['id'] . "'> Remove </button></a></form></td>" .
+		"<td><form><a href='unfavorite.php?id=". $row['id']. "'><button type = 'button' name = 'vidID' value = '". $row['id'] . "'> Remove </button></a></form></td>" .
 		"</tr>";
 	}
 	mysqli_free_result($q);
