@@ -23,7 +23,7 @@
     	echo "<li><a href = 'modify.php'>Modify A Video</a></li>";
 	}
 	?>
-    <li><a href = "#">Category</a>
+    <li><a href = "#"  onClick="changeSession()">Category</a>
     	<ul>		
                	<li><a href = "video.php?sort=lgnth"> Length </a>
                 	<ul>

@@ -1,3 +1,10 @@
+<script type = 'text/javascript'>
+	function changeSession(){
+		xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("GET","modifysession.php");
+		xmlhttp.send();
+	}
+</script>
 <!doctype html>
 <?php
 
@@ -33,7 +40,7 @@
 <meta charset="utf-8">
 <title>Multiple Video Sort</title>
 </head>
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method = "post">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method = "post" onClick="changeSession()">
   <!-- video length -->
   <nav >
       <ul>

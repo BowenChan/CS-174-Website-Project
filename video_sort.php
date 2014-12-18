@@ -126,6 +126,37 @@
 		case  'ytc':
 			$constr1 = "WHERE `category` LIKE '%Yang Taichi%'";
 			break;
+			case  'ctc':
+			$constr1 = "WHERE `category` LIKE '%Chen Taichi%'";
+			break;
+			case  'stc':
+			$constr1 = "WHERE `category` LIKE '%Sun Taichi%'";
+			break;
+			case  'wtc':
+			$constr1 = "WHERE `category` LIKE '%Wu Taichi%'";
+			break;
+			case  'qg':
+			$constr1 = "WHERE `category` LIKE '%QiGong%'";
+			break;
+			case  'shl':
+			$constr1 = "WHERE `category` LIKE '%Shaolin%'";
+			break;
+			case  'tkd':
+			$constr1 = "WHERE `category` LIKE '%Tae Kwon Do%'";
+			break;
+			case  'wc':
+			$constr1 = "WHERE `category` LIKE '%Wing Chun%'";
+			break;
+			case  'aki':
+			$constr1 = "WHERE `category` LIKE '%Aikido%'";
+			break;
+			case  'jd':
+			$constr1 = "WHERE `category` LIKE '%Judo%'";
+			break;
+			case  'kfm':
+			$constr1 = "WHERE `category` LIKE '%KungFu Movie%'";
+			break;
+			
 			
 				default:
 			$constr1 = "";
