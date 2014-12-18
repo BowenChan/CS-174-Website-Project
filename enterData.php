@@ -52,7 +52,7 @@ include ("dbconnect.php");
 <p><label for=tag><strong>tag</strong></label>
 <input type=text id='tag' name='tag' size= '30' />(keywords separated by commas)</p>
 <label for=category><strong>Category</strong></label>
-	<select id='category' name=category>
+	<select id='category' name='category'>
     	<option value=Yang Taichi>Yang Taichi</option>
         <option value=Chen Taichi>Chen Taichi</option>
         <option value=Sun Taichi>Sun Taichi</option>
