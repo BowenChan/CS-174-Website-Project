@@ -1,3 +1,30 @@
+<?php
+	
+	session_start();
+	
+	if(isset($_POST['vidl']) || isset($_POST['vidr']) || isset($_POST['vidv']) || isset($_POST['vidc']) || isset($_POST['vidt'])){
+		$vidarr = array();
+		$vidleng = empty($_POST['vidl']) ?"": $_POST['vidl'];
+		if($vidleng != "")
+			array_push($vidarr, $vidleng);
+		$vidres = empty($_POST['vidr']) ? "":$_POST['vidr'];
+		if($vidres != "")
+			array_push($vidarr, $vidres);
+		$vidlang = empty($_POST['vidv']) ?"": $_POST['vidv'] ;
+		if($vidlang != "")
+			array_push($vidarr, $vidlang);
+		$vidcoun = empty($_POST['vidc']) ?"": $_POST['vidc'];
+		if($vidcoun != "")
+			array_push($vidarr, $vidcoun);
+		$vidtype = empty($_POST['vidt']) ?"": implode(',' ,$_POST['vidt']);
+		if($vidtype != "")
+			array_push($vidarr, $vidtype);
+		$_SESSION['vidarrs'] = $vidarr;
+		header("location: video.php");
+		
+	}
+
+?>
 <!DOCTYPE HTML>
 <HTML lang="en">
 <head>
@@ -117,7 +144,7 @@
 
 <div class="bottom-search-area">    
     
-<form action="video.php" method = "post" class="form-inline" id="combine" role="form">
+<form action="index.php" method = "post" class="form-inline" id="combine" role="form">
 	<div class="form-group">
     
     	<div class="input-group">

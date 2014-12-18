@@ -26,6 +26,7 @@
 		if($vidtype != "")
 			array_push($vidarr, $vidtype);
 		$_SESSION['vidarr'] = $vidarr;
+		$_SESSION['vidarra'] = $vidarr;
 	}
 	
 ?>

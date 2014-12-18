@@ -20,10 +20,14 @@
 
     <body>
 <?php 
+	session_start();
 	ob_start();
 	function display($db){
+	if(isset($_SESSION['vidarr'])){
+	$_SESSION['vidarr'] = isset($_SESSION['vidarrs'])? $_SESSION['vidarrs'] : $_SESSION['vidarr'];
+	$_SESSION['vidarr'] = isset($_SESSION['vidarra'])? $_SESSION['vidarra'] : $_SESSION['vidarr'];
+		}
 	require_once("connect.php");
-	
 	include($db);
 	include('video_sort.php');
 	
