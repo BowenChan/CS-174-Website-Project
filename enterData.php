@@ -51,6 +51,23 @@ include ("dbconnect.php");
 <input type=text id=image name=image size= 30 />
 <p><label for=tag><strong>tag</strong></label>
 <input type=text id=tag name=tag size= 30 />(keywords separated by commas)</p>
+<label for=resolution><strong>Category</strong></label>
+	<select id=resolution name=resolution>
+    	<option value=Yang Taichi>Yang Taichi</option>
+        <option value=Chen Taichi>Chen Taichi</option>
+        <option value=Sun Taichi>Sun Taichi</option>
+        <option value=Wu Taichi>Wu Taichi</option>
+        <option value=QiGong>QiGong</option>
+        <option value=Shaolin>Shaolin</option>
+        <option value=Tae kwon do>Tae Kwon Do</option>
+        <option value=Wing Chun>Wing Chun</option>
+        <option value=Aikido>Aikido</option>
+        <option value=Judo>Judo</option>
+        <option value=KungFu Movie>KungFu Movie</option>
+
+	</select>
+</p>
+
 <input type=submit name=submit value="submit">
 <input type=reset name=reset value="Start Over">
 </form>

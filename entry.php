@@ -15,10 +15,10 @@ if(!empty($_POST['type']))
 	$type= implode(',', $_POST['type']);
 $image =mysql_real_escape_string(trim(strip_tags($_POST['image'])),$dbc);
 $tag = mysql_real_escape_string(trim(strip_tags($_POST['tag'])),$dbc); 
-
+$cat = mysqli_real_escape_string($link,trim(strip_tags($_POST['category'])));
 $query = "insert into fun_video "
         ." (title,videolink,videolength,highestresolution,description,language,viewcount,videotype,iconimage,tag) values "
-                ."('$title', '$link', '$length', '$resolution', '$desc','$language','$count','$type','$image','$tag')"
+                ."('$title', '$link', '$length', '$resolution', '$desc','$language','$count','$type','$image','$tag', '$cat')"
         ;
 
 //var_dump($query);	   
