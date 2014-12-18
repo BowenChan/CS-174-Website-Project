@@ -70,7 +70,7 @@
 			
 		//Length
 		case '10':
-			$constr1 = "WHERE `videolength` > '0' AND `videolength` <= '10'";
+			$constr1 = "WHERE `videolength` > 0 AND `videolength` <= '10'";
 			break; 
 		case '20':
 			$constr1 = "WHERE `videolength` >= '10' AND `videolength` <= '20'";
@@ -82,7 +82,7 @@
 			$constr1 = "WHERE `videolength` >= '40' AND `videolength` <= '60'";
 			break; 
 		case '61':
-			$constr1 = "WHERE `videolength` >= '60'";
+			$constr1 = "WHERE `videolength` >= 60";
 			break; 
 			
 		//View Count
@@ -158,7 +158,7 @@
 			break;
 			
 			
-				default:
+			default:
 			$constr1 = "";
 			break;
 		}
@@ -262,10 +262,11 @@
 		{
 			$constr1 .= " AND ";
 		}
-		 
+		$_SESSOIN['multi'] = $constr1;
 		$j++;
 	}
-	$_SESSION['constr'] = $constr1;
+		$_SESSION['constr'] = $constr1;
 	
 	}
+	
 ?></pre>

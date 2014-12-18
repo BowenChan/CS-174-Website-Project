@@ -39,65 +39,65 @@
 		} else echo "<li><a href = 'needadmin.html'>Modify A Video</a></li>";
 	}
 	?>
-    <li><a href = "#"  onClick="changeSession()">Category</a>
+    <li><a href = "#">Category</a>
     	<ul>		
-               	<li><a href = "video.php?sort=lgnth"> Length </a>
+               	<li><a href = "video.php?sort=lgnth"  onClick = "changeSession()"> Length </a>
                 	<ul>
-                    	<li><a href = "video.php?sort=lgnth&constr=10"> 0-10 minutes </a></li>
-                        <li><a href = "video.php?sort=lgnth&constr=20"> 10-20 minutes </a></li>
-                        <li><a href = "video.php?sort=lgnth&constr=40"> 20-40 minutes </a></li>
-                        <li><a href = "video.php?sort=lgnth&constr=60"> 40-60 minutes </a></li>
-                        <li><a href = "video.php?sort=lgnth&constr=61"> 1+ hour </a></li>
+                    	<li><a href = "video.php?sort=lgnth&constr=10" onClick="changeSession()"> 0-10 minutes </a></li>
+                        <li><a href = "video.php?sort=lgnth&constr=20" onClick="changeSession()"> 10-20 minutes </a></li>
+                        <li><a href = "video.php?sort=lgnth&constr=40" onClick="changeSession()"> 20-40 minutes </a></li>
+                        <li><a href = "video.php?sort=lgnth&constr=60" onClick="changeSession()"> 40-60 minutes </a></li>
+                        <li><a href = "video.php?sort=lgnth&constr=61" onClick="changeSession()"> 1+ hour </a></li>
                     </ul>
                 </li>
-                <li><a href = "video.php?sort=rsltn"> Highest Resolution </a>
+                <li><a href = "video.php?sort=rsltn"  onClick = "changeSession()"> Highest Resolution </a>
                 	<ul>
-                    	<li><a href = "video.php?sort=rsltn&constr=144"> 144p </a></li>
-                        <li><a href = "video.php?sort=rsltn&constr=240"> 240p </a></li>
-                        <li><a href = "video.php?sort=rsltn&constr=360"> 360p </a></li>
-                        <li><a href = "video.php?sort=rsltn&constr=480"> 480p </a></li>
-                        <li><a href = "video.php?sort=rsltn&constr=720"> 720p </a></li>
-                        <li><a href = "video.php?sort=rsltn&constr=1080"> 1080p </a></li>
+                    	<li><a href = "video.php?sort=rsltn&constr=144" onClick = "changeSession()"> 144p </a></li>
+                        <li><a href = "video.php?sort=rsltn&constr=240" onClick = "changeSession()"> 240p </a></li>
+                        <li><a href = "video.php?sort=rsltn&constr=360" onClick = "changeSession()"> 360p </a></li>
+                        <li><a href = "video.php?sort=rsltn&constr=480" onClick = "changeSession()"> 480p </a></li>
+                        <li><a href = "video.php?sort=rsltn&constr=720" onClick = "changeSession()"> 720p </a></li>
+                        <li><a href = "video.php?sort=rsltn&constr=1080" onClick = "changeSession()"> 1080p </a></li>
                 	</ul>
                 </li>
-                <li><a href = "video.php?sort=lang"> Language </a>
+                <li><a href = "video.php?sort=lang" onClick = "changeSession()"> Language </a>
                 	<ul>
-                    	<li><a href = "video.php?sort=lang&constr=eng"> English </a></li>
-                        <li><a href = "video.php?sort=lang&constr=none"> Non-English </a></li>
+                    	<li><a href = "video.php?sort=lang&constr=eng" onClick = "changeSession()"> English </a></li>
+                        <li><a href = "video.php?sort=lang&constr=none" onClick = "changeSession()"> Non-English </a></li>
                     </ul>
                 </li>
-                <li><a href = "video.php?sort=vwcnt"> View Count </a>
+                <li><a href = "video.php?sort=vwcnt" onClick = "changeSession()"> View Count </a>
                 	<ul>
-                        <li><a href = "video.php?sort=vwcnt&constr=75"> 50,000-75,000 </a></li>
-                        <li><a href = "video.php?sort=vwcnt&constr=100"> 75,001-100,000 </a></li>
-                        <li><a href = "video.php?sort=vwcnt&constr=125"> 100,001-125,000 </a></li>
-                        <li><a href = "video.php?sort=vwcnt&constr=150"> 125,001 - 150,000 </a></li>
-                        <li><a href = "video.php?sort=vwcnt&constr=151"> 150,000+ </a></li>
+                        <li><a href = "video.php?sort=vwcnt&constr=75" onClick = "changeSession()"> 50,000-75,000 </a></li>
+                        <li><a href = "video.php?sort=vwcnt&constr=100" onClick = "changeSession()"> 75,001-100,000 </a></li>
+                        <li><a href = "video.php?sort=vwcnt&constr=125" onClick = "changeSession()"> 100,001-125,000 </a></li>
+                        <li><a href = "video.php?sort=vwcnt&constr=150" onClick = "changeSession()"> 125,001 - 150,000 </a></li>
+                        <li><a href = "video.php?sort=vwcnt&constr=151" onClick = "changeSession()"> 150,000+ </a></li>
                     </ul>
                 </li>
-                <li><a href = "video.php?sort=vtype"> Video Type </a>
+                <li><a href = "video.php?sort=vtype" onClick = "changeSession()"> Video Type </a>
                 	<ul>
-                    	<li><a href = "video.php?sort=vtype&constr=tut"> Tutorial </a></li>
-                        <li><a href = "video.php?sort=vtype&constr=ent"> Entertainment </a></li>
-                        <li><a href = "video.php?sort=vtype&constr=app"> Application </a></li>
-                        <li><a href = "video.php?sort=vtype&constr=wep"> Weapons </a></li>
-                        <li><a href = "video.php?sort=vtype&constr=gro"> Group Demo </a></li>
-                        <li><a href = "video.php?sort=vtype&constr=oth"> Others </a></li>
+                    	<li><a href = "video.php?sort=vtype&constr=tut" onClick = "changeSession()"> Tutorial </a></li>
+                        <li><a href = "video.php?sort=vtype&constr=ent" onClick = "changeSession()"> Entertainment </a></li>
+                        <li><a href = "video.php?sort=vtype&constr=app" onClick = "changeSession()"> Application </a></li>
+                        <li><a href = "video.php?sort=vtype&constr=wep" onClick = "changeSession()"> Weapons </a></li>
+                        <li><a href = "video.php?sort=vtype&constr=gro" onClick = "changeSession()"> Group Demo </a></li>
+                        <li><a href = "video.php?sort=vtype&constr=oth" onClick = "changeSession()"> Others </a></li>
                  	</ul>
                	</li>
-                <li><a href = "video.php?sort=vcat"> Video Category </a>
+                <li><a href = "video.php?sort=vcat" onClick = "changeSession()"> Video Category </a>
                 	<ul style = "width: 200px">
-                    	<li><a href = "video.php?sort=vcat&constr=ytc"> Yang Taichi </a></li>
-                        <li><a href = "video.php?sort=vcat&constr=ctc"> Chen Taichi </a></li>
-                        <li><a href = "video.php?sort=vcat&constr=stc"> Sun Taichi </a></li>
-                        <li><a href = "video.php?sort=vcat&constr=wtc"> Wu Taichi </a></li>
-                        <li><a href = "video.php?sort=vcat&constr=qg"> QiGong </a></li>
-                        <li><a href = "video.php?sort=vcat&constr=shl"> Shaolin </a></li>
-                        <li><a href = "video.php?sort=vcat&constr=tkd"> Tae Kwon Do </a></li>
-                        <li><a href = "video.php?sort=vcat&constr=wc"> Wing Chun </a></li>
-                        <li><a href = "video.php?sort=vcat&constr=aki"> Aikido </a></li>
-                        <li><a href = "video.php?sort=vcat&constr=jd"> Judo </a></li>
-                        <li><a href = "video.php?sort=vcat&constr=kfm"> KungFu Movie </a></li>
+                    	<li><a href = "video.php?sort=vcat&constr=ytc" onClick = "changeSession()"> Yang Taichi </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=ctc" onClick = "changeSession()"> Chen Taichi </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=stc" onClick = "changeSession()"> Sun Taichi </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=wtc" onClick = "changeSession()"> Wu Taichi </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=qg" onClick = "changeSession()"> QiGong </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=shl" onClick = "changeSession()"> Shaolin </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=tkd" onClick = "changeSession()"> Tae Kwon Do </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=wc" onClick = "changeSession()"> Wing Chun </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=aki" onClick = "changeSession()"> Aikido </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=jd" onClick = "changeSession()"> Judo </a></li>
+                        <li><a href = "video.php?sort=vcat&constr=kfm" onClick = "changeSession()"> KungFu Movie </a></li>
                  	</ul>
                	</li>
                 

@@ -36,7 +36,7 @@
 	$display = 10;
 	$num_rec = null;
 	$num_pages = 0;
-	$_SESSION['constr'] = isset($_SESSION['constr'])? $_SESSION['constr'] : $constr1;
+	
 	if(isset($_GET[$num_rec]))
 	{
 		$num_rec = 0;
@@ -85,6 +85,8 @@
       <th style = "border:none"> Category </th>
     </tr>
 <?php
+echo $_SESSION['constr'];
+echo " Hello " . $constr1;
 	if($num_rec != 0)
 	{
 	while($row = mysqli_fetch_array($q, MYSQLI_ASSOC))
