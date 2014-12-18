@@ -80,6 +80,7 @@
   <th style = "border:none"> Icon Image </th>
   <th style = "border:none"> Video Tags </th>
   <th style = "border:none"> Favorite </th>
+  <th style = "border:none"> Category </th>
 </tr>
 <?php
 	if($num_rec != 0)
@@ -98,6 +99,7 @@
 		"<td><a class = 'youtube' href = " . $row['videolink'] . "><img src =" . $row['iconimage'] . " alt=picture></a></td>" .
 		"<td>" . $row['tag'] . "</td>" .
 		"<td><form><a href='favoriteVideo.php?id=". $row['id']. "'><button type = 'button' name = 'vidID' value = '". $row['id'] . "'> Favorite </button></a></form></td>" . 	
+		"<td>" . $row['category'] . "</td>" .
 		"</tr>";
 	}
 	mysqli_free_result($q);
